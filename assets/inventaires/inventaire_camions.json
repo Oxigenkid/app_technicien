@@ -1,0 +1,5556 @@
+{
+  "tech_01": {
+    "technicien": "David Hestin",
+    "camion": "Camion #101",
+    "localisation": "TECH 1",
+    "nb_articles": 182,
+    "articles": [
+      {
+        "ref": "11BFL0085",
+        "nom": "ÉTIQUETTE AUTO-COLLANTE LOGO RAYCOWYLIE",
+        "quantite": 10,
+        "unite": "pcs",
+        "cout": 0.96,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11BFL0127",
+        "nom": "LABEL FOR BYPASS SWITCH 33M0100",
+        "quantite": 12,
+        "unite": "pcs",
+        "cout": 0.78,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11EMA0200",
+        "nom": "CABLE, 2 WAY, 20 AWG, BLACK PVC JACKET",
+        "quantite": 40,
+        "unite": "m",
+        "cout": 0.61,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11EMA0600",
+        "nom": "CABLE 6 WAY,20 AWG,PVC JACKET OD MIN.8MM",
+        "quantite": 50,
+        "unite": "m",
+        "cout": 1.72,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11EMA0800",
+        "nom": "CABLE, 8W, 20 AWG,PVC JACKET,(EP8M20P)",
+        "quantite": 20,
+        "unite": "m",
+        "cout": 0.73,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11EMA1200",
+        "nom": "CABLE, 12W, 20 AWG, BR SHIELD,PVC JACKET",
+        "quantite": 25,
+        "unite": "m",
+        "cout": 2.48,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11ERA0202",
+        "nom": "CABLE FOR REEL,2XAWG24(7X32),BL KEVLAR",
+        "quantite": 70,
+        "unite": "m",
+        "cout": 0.74,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11ERA0400",
+        "nom": "CABLE FOR REEL, 4XAWG24(7X32)  BL KEVLAR",
+        "quantite": 54,
+        "unite": "m",
+        "cout": 1.52,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11FNX5002",
+        "nom": "ÉCROU HEX 1/4-20 ZP (QVN1/4Z)",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 0.01,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11FVB5008",
+        "nom": "BOUL HEX 1/4-20 3/4 ZP 100/BTE (QVX1/4I",
+        "quantite": 8,
+        "unite": "pqt",
+        "cout": 0.08,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11FWF1011",
+        "nom": "ROND PLATE 1/4 ZP (QVWF1/4Z)",
+        "quantite": 8,
+        "unite": "pcs",
+        "cout": 0.06,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11FWL1003",
+        "nom": "RONDELLE LOCK 1/4 ZP (QVWL1/4Z)",
+        "quantite": 8,
+        "unite": "pcs",
+        "cout": 0.01,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11GPP0071",
+        "nom": "HDT-48-00-CRIMPTOOL,DT/HD,SIZE 12,16,20",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 229.0,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11HEG0134",
+        "nom": "GLAND NICKEL M12 SHORT THREAD 6-7.5MM",
+        "quantite": 8,
+        "unite": "pcs",
+        "cout": 5.0,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11HEG0140",
+        "nom": "GLAND NICKEL M12 90 DEG THREAD 6-7.5MM",
+        "quantite": 6,
+        "unite": "pcs",
+        "cout": 9.88,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11HEL0002",
+        "nom": "GAINE PROTECT 3/8 (ERG375)",
+        "quantite": 45,
+        "unite": "m",
+        "cout": 0.2,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11HEL0003",
+        "nom": "GAINE PROTECT 1/2 (ERG500)",
+        "quantite": 15,
+        "unite": "m",
+        "cout": 0.12,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11HEX0032",
+        "nom": "BATTERIE LITHIUM 3.6V 19Ah SIZE D",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 11.75,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11HEX0040",
+        "nom": "BATTERIE LITHIUM AA CELL 1.5 VOLT",
+        "quantite": 8,
+        "unite": "pcs",
+        "cout": 3.62,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11HMA0015",
+        "nom": "AIMANT32MMX7.8MM THREADS M6 MALE",
+        "quantite": 12,
+        "unite": "pcs",
+        "cout": 2.23,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11HMA0016",
+        "nom": "MAGNET 1-1/4X0.375 SCREW 10-32 (M5)",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 1.94,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11HMC0049",
+        "nom": "CHAINE 40, 1 CÔTÉ D'ATTACHEMENT À TOUS L",
+        "quantite": 6,
+        "unite": "pcs",
+        "cout": 13.53,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11HMC0050",
+        "nom": "DEMI MAILLE 40-1, POUR CHAINE 40",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 1.47,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11HMC0051",
+        "nom": "MAILLE PATENT 40-1",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 2.93,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11SRA0003",
+        "nom": "RELAY, SPDT 12V 30A BOSCH (0332209150",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11SRA0004",
+        "nom": "RELAY, SPDT 24V 20A BOSCH (RY0332204203)",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 4.16,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11SSH0001",
+        "nom": "BOOT INTER À BASCULE 15/32 30F002 (SCN1",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 4.35,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11SSX0016",
+        "nom": "CAPT PROX 12MM PNP, SHORT 5M",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 43.87,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11SSX0017",
+        "nom": "CAPT PROX 12MM PNP, LONG",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 32.16,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11SSX0018",
+        "nom": "CAPT PROX 8MM NPN, FLUSH MOUNT",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 27.07,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCD0001",
+        "nom": "DEUTSCH PIN SIZE 16 (16-20 AWG)",
+        "quantite": 14,
+        "unite": "pcs",
+        "cout": 0.41,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCD0002",
+        "nom": "CONNECTOR,DEUT.SOCKET S-16 (16-20 AWG)",
+        "quantite": 17,
+        "unite": "pcs",
+        "cout": 0.43,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCD0005",
+        "nom": "DEUTSCH SOCKET SIZE 20 (20-24 AWG)",
+        "quantite": 10,
+        "unite": "pcs",
+        "cout": 0.58,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCD0005",
+        "nom": "DEUTSCH SOCKET SIZE 20 (20-24 AWG)",
+        "quantite": 40,
+        "unite": "pcs",
+        "cout": 0.58,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCD1020",
+        "nom": "CONN DEUTSCH DT SERIE RECEPT 2P MALE",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 1.09,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCD1022",
+        "nom": "CONN DEUTSCH SECONDARY LOCK 2 PIN",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.12,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCD1023",
+        "nom": "CONN DEUTSCH SECONDARY LOCK 2 SOCK",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 0.15,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCD1024",
+        "nom": "CONN DEUTSCH BACK SHELL 2P MALE",
+        "quantite": 6,
+        "unite": "pcs",
+        "cout": 0.99,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCD1025",
+        "nom": "CONN DEUTSCH BACK SHELL 2S SOCKET",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 2.5,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCD1030",
+        "nom": "CONN DEUTSCH DT SERIE RECEPT 3P MALE",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 2.25,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCD1031",
+        "nom": "CONN DEUTSCH DT SERIE PLUG 3S FEMALE",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 1.65,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCD1040",
+        "nom": "CONN DEUTSCH DT SERIE RECEPT 4P MALE",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 2.47,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCD1041",
+        "nom": "CONN DEUTSCH DT SERIE PLUG 4S FEMALE",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 2.29,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCD1042",
+        "nom": "CONN DEUTSCH SECONDARY LOCK 4 PIN",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 0.21,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCD1043",
+        "nom": "CONN DEUTSCH SECONDARY LOCK 4 SOCK",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCP0010",
+        "nom": "CONNECTOR, CAN BUS T",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 12.41,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCP0010",
+        "nom": "CONNECTOR, CAN BUS T",
+        "quantite": 8,
+        "unite": "pcs",
+        "cout": 12.41,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCP0013",
+        "nom": "CAN BUS M12 5P MALE 120 OHMS TERMINATOR",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 5.27,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TCP0018",
+        "nom": "CONNECTOR,M12 IN-LINE 120OHMS, TERM. RED",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 9.55,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TFF3050",
+        "nom": "FUSIBLE 10A/32V MINI-BLADE RAPIDE",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 0.53,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TFF4015",
+        "nom": "FUSIBLE 15A/32V MINI-BLADE RAPIDE",
+        "quantite": 13,
+        "unite": "pcs",
+        "cout": 3.03,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TFW0001",
+        "nom": "CAISSON DE FUSIBLE SUR FIL 20A MAX",
+        "quantite": 11,
+        "unite": "pcs",
+        "cout": 11.11,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11TFW0004",
+        "nom": "FUSE HOLDER BLADE MINI ATC/ATO 32V 10A",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 2.2,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11YAS4021",
+        "nom": "ADAPT DROIT 6 JIC M X 6 ORB M (HEC5315X6",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 1.37,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11YAS7014",
+        "nom": "ADAPT DROIT 6 ORF M X 8 ORB M",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 2.42,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11YAS7015",
+        "nom": "ADAPT DROIT 4 ORF M X 8 ORB M",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 1.93,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11YAT0006",
+        "nom": "ADAPT EN T 12 JIC M X 2 X 12 JIC FSW CEN",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 14.8,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11YAT0022",
+        "nom": "ADAPT EN T 12 ORF M X 2 X FSW BOUT (HE47",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 13.8,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11YAT0023",
+        "nom": "ADAPT EN T 16 ORF M X 2 X FSW BOUT (HE47",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 23.74,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11YAT0025",
+        "nom": "ADAPT EN T 8 ORF M X 2 X F BOUT (HE4706X",
+        "quantite": 10,
+        "unite": "pcs",
+        "cout": 6.62,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11YAT0040",
+        "nom": "ADAPT EN T 12 JIC M X 2 X FSW BOUT (HEC5",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 6.17,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11YAT0041",
+        "nom": "ADAPT EN T 16 JIC M X 2 X FSW BOUT (HEC5",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 14.21,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11YAT0068",
+        "nom": "ADAPT EN T 8 ORF M X  8 ORF FSW X 6 ORB",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 12.44,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11YAT0076",
+        "nom": "ADAPTOR T 4ORF M X 4ORF FSW X 4ORB F",
+        "quantite": 8,
+        "unite": "pcs",
+        "cout": 12.05,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11YVA0559",
+        "nom": "VALVE HYDRAULIQUE 3 VOIES 2 POSITIONS PA",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 149.12,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11YVC0545",
+        "nom": "BOBINE VALVE HYDR PARKER 12 VDC HAUTE PR",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 33.3,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "11YVC0549",
+        "nom": "BOBINE VALVE HYDRAULIQUE PARKER 24 VDC H",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 41.1,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22BCB0118",
+        "nom": "PCB ASSY, i3000, RELAIS VERSION 104",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 80.94,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22BCB0199",
+        "nom": "PCB ASSY, ADAPTOR FOR PROXIMITY SWITCHES",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 77.42,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0001",
+        "nom": "ROUE DENTÉE 5 DENTS 3-1/4 BLANC CAT325L",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 10.75,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0002",
+        "nom": "ROUE DENTÉE 5 DENTS 3-3/4 BLANC POUR CA",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 8.16,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0003",
+        "nom": "ROUE DENTÉE 5 DENTS 4 BLANC POUR CAT 33",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 17.91,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0004",
+        "nom": "ROUE DENTÉE 6 DENTS 3-1/4 BLANC (ZKCD6)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 29.19,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0005",
+        "nom": "ROUE DENTÉE 6 DENTS 3-3/8 BLANC POUR SA",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 5.61,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0007",
+        "nom": "ROUE DENTÉE 9 DENTS 4-1/2 BLANC POUR HI",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 7.2,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0009",
+        "nom": "ROUE DENTÉE 10 DENTS 3-1/2 BLANC (ZKCD1",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 10.75,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0010",
+        "nom": "ROUE DENTÉE 12 DENTS 6 BLANC(ZKCD12)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 17.9,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0012",
+        "nom": "ROUE DENTÉE 13 DENTS 5-3/4 BLANC POUR G",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 15.0,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0013",
+        "nom": "ROUE DENTÉE 14 DENTS 3-1/2 BLANC POUR P",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 10.42,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0015",
+        "nom": "ROUE DENTÉE 17 DENTS 8 BLEUE (ZKCD17)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 19.78,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0015",
+        "nom": "ROUE DENTÉE 17 DENTS 8 BLEUE (ZKCD17)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 19.78,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0016",
+        "nom": "ROUE DENTÉE 18 DENTS 5-1/4 BLEUE (ZKCD1",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 12.03,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0017",
+        "nom": "ROUE DENTÉE 19 DENTS 5-1/4 BLEUE POUR G",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 19.91,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0018",
+        "nom": "ROUE DENTÉE 22 DENTS 7-1/8 BLEUE POUR R",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 11.95,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0019",
+        "nom": "ROUE DENTÉE 25 DENTS 7 BLEUE (ZKCD25-7)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 19.28,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0024",
+        "nom": "ROUE DENTÉE 5 DENTS 5-1/2 BLEUE",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 10.37,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0025",
+        "nom": "ROUE DENTÉE 7 DENTS 6 POUR KOMATS",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 22.14,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0027",
+        "nom": "ROUE DENTÉE 5 DENTS BLANC POUR HITACHI 3",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 5.22,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0030",
+        "nom": "GEAR  14 DENTS 4-1/4 NOUVEAU MODEL",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 5.88,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0032",
+        "nom": "GEAR, 15 TEETH, 4-1/4po for NATIONAL 600",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 6.84,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0034",
+        "nom": "ROUE DENTÉE 5 DENTS POUR HITACHI 300 ET",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 3.45,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0038",
+        "nom": "ROUE DENTÉE 5 DENTS 3-3/4  BLANC",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 16.28,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0040",
+        "nom": "ROUE DENTÉE 14 DENTS 4.5  BLANC",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 24.2,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0044",
+        "nom": "ROUE DENTÉE 7 DENTS 3- 1/2  UHMW BLANC",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 7.55,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0047",
+        "nom": "ROUE DENTÉE 22 DENTS 9.6 BLEUE POUR R",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 132.42,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KGR0200",
+        "nom": "GEAR 40 FINISH BORE 20 DENTS 3/4",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 46.51,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KRF0001",
+        "nom": "GUIDE DE CÂBLE (+ BUSHING DE PLASTIQUE)",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 6.44,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KRF0002",
+        "nom": "CABLE GUIDE 10 OR A2B SWITCH  BRACKET",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 7.74,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KRF0034",
+        "nom": "CABLE GUIDE, W/ ROLLER",
+        "quantite": 2,
+        "unite": "m",
+        "cout": 24.87,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KRF0055",
+        "nom": "GUIDE DE CÂBLE, BARRE 1/4, PETITE LOUPE",
+        "quantite": 4,
+        "unite": "m",
+        "cout": 3.65,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KRF1034",
+        "nom": "GUIDE DE CÂBLE À ROULEAU PEINT (NOIR)",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 21.91,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KRH0710",
+        "nom": "GRANDE ROUE ENGRENAGE DL ENROUL TYPE H (",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 38.39,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSF0044",
+        "nom": "ADAPTING BRACKET FROM 33S0015 TO 33S0046",
+        "quantite": 7,
+        "unite": "pcs",
+        "cout": 19.99,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSF0461",
+        "nom": "KIT SUP DROIT CAPT ROT CANBUS 33S0047",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 30.0,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSF0461",
+        "nom": "KIT SUP DROIT CAPT ROT CANBUS 33S0047",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 30.0,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSF0580",
+        "nom": "SUPPORT À ROUE D'ENGRENAGE,W/SET SCREW",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 21.59,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSF0580",
+        "nom": "SUPPORT À ROUE D'ENGRENAGE,W/SET SCREW",
+        "quantite": 9,
+        "unite": "pcs",
+        "cout": 21.59,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSF0641",
+        "nom": "PLAQUE À SOUDER POUR CAPTEUR DE ROTATION",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 6.22,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSF0677",
+        "nom": "ROTATION SENSOR SWIVEL ADAPTATOR V2",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 103.2,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSF1580",
+        "nom": "SUPPORT À ROUE D'ENGRENAGE,W/SET SCREW",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 14.47,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSF5020",
+        "nom": "BRAKET 5020 UNIVERSEL PRIMER",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 1.58,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSF5025",
+        "nom": "BRAKET 5020 JOHN D / HITA #1",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 22.38,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSF5029",
+        "nom": "BRAKET 5020  #4 PRIMER",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 21.75,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSF5032",
+        "nom": "ASSEM UNI-BRACKET",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 19.95,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSF5034",
+        "nom": "BRAKET PROX MULTI-PURPOSE PRIMER",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 1.58,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSH0670",
+        "nom": "FLEXIBLE SHAFT COUPLING 10 MM x 10 MM",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 33.55,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSK0016",
+        "nom": "ADAPTOR KIT,  ROTATION SENSOR, CBUS",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 82.49,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSK0032",
+        "nom": "KIT ESSIEU ET BOULONS CAPT ROT CANB",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 43.54,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22KSK0032",
+        "nom": "KIT ESSIEU ET BOULONS CAPT ROT CANB",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 43.54,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22SLE0034",
+        "nom": "WARNING LIGHT 12/24V AC/DC LED W/BRACKET",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 64.84,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "22SRK0005",
+        "nom": "LOOP KIT 5/32 ASSEMBLY, SMALL OPENING",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 9.26,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33A0061-80",
+        "nom": "SENSOR, ANGLE CANB. MF 360° W/GIRO BOOM",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 221.7,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33A0061-82",
+        "nom": "ANG SENS CANBUS MF 360° W/GIRO 3RD",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 226.69,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33B0009",
+        "nom": "SWITCH,A2B ALU 36 MILITARY CON. 2 PINS",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 183.75,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33C0110",
+        "nom": "SENSOR, LOAD, RAYFLEX",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 248.92,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33C2001",
+        "nom": "SENSOR,LOAD PIN1K (ZRTP1K)(UK:LC0307-3)",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 668.18,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33C4002",
+        "nom": "SENSOR, PRESSURE, 300 BAR, mV output",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 244.17,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33C4018",
+        "nom": "SENSOR,PRESSURE 300BAR 4-20MA M12  ORB4",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 369.88,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33C4019",
+        "nom": "SENSOR,PRESSURE 400BAR 4-20MA M12  ORB4",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 156.32,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33C4020-B2",
+        "nom": "PRESS. SENSOR#3 400BAR J1939 M12 ORB4",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 198.47,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33C4030",
+        "nom": "SENSOR, PRESSURE,300BAR 0.5V-5.5V M12  O",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 183.8,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33C4040-B0",
+        "nom": "PRESS. SENSOR#1 400BAR J1939 M12 ORB4",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 229.4,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33C4040-B1",
+        "nom": "PRESS. SENSOR#2 400BAR J1939 M12 ORB4",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 229.4,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33C4040-B2",
+        "nom": "PRESS. SENSOR#3 400BAR J1939 M12 ORB4",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 229.4,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33D5020",
+        "nom": "MANETTE 5020, 5010 SYSCOMAK SÉRIE#",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 216.77,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33E0001",
+        "nom": "SENSOR, LENGTH, POT IK 10T, W/O BRACKET",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 32.41,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33E0010",
+        "nom": "CAPTEUR LONGUEUR POT 1K 5 TOURS",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 31.28,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33J0090",
+        "nom": "BRIDGING KEY BOX W/ 6 PIN CONNECTOR",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 181.86,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33L0017",
+        "nom": "AMPLIFICATEUR DE CELLULE DE CHARGE 4-20",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 228.12,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33L0018",
+        "nom": "AMPLIFICATEUR DE CELLULE DE CHARGE 4-20",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 205.79,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33M0077",
+        "nom": "CAN BUS LOAD CELL INTERFACE",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 256.8,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33M0078",
+        "nom": "CAN BUS LOAD CELL (2) INTERFACE",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 373.21,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33M0105",
+        "nom": "INTERFACE, CAN BUS CENTRAL I/O, i4500",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 389.9,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33M0110",
+        "nom": "INTERFACE, RELAY, CAN BUS, i4000",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 408.25,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33M0122-B0",
+        "nom": "IN-LINE CAN BUS LOAD (SIG +/-)  W/CABLE",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 146.17,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33M0149",
+        "nom": "CAN ANGLE, LENGTH AND A2B INTERFACE",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 236.84,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33R0510",
+        "nom": "CABLE TRANSDUCER CANOPEN 2.3M IP67 -40°C",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 661.99,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0005",
+        "nom": "CÂBLE ASS 3 COND POUR CAPTEUR D'ANGLE",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 60.49,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0070",
+        "nom": "CÂBLE ASS, 2 COND, 25', CONN DIN, HYDRAU",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 57.23,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0101",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 1M",
+        "quantite": 6,
+        "unite": "m",
+        "cout": 11.51,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0102",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 2M",
+        "quantite": 2,
+        "unite": "m",
+        "cout": 11.81,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0103",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 3M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 14.22,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0103",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 3M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 14.22,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0104",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 4M",
+        "quantite": 2,
+        "unite": "m",
+        "cout": 14.04,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0106",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 6M",
+        "quantite": 3,
+        "unite": "m",
+        "cout": 18.05,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0107",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 7M",
+        "quantite": 16,
+        "unite": "m",
+        "cout": 16.84,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0108",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 8M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 19.41,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0226",
+        "nom": "5W 106 IN CAN 5P M12 / DT 6S W/BSHL",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 59.08,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0336-01",
+        "nom": "CABLE CANBUS DISP i4000 1M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 30.49,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0338",
+        "nom": "CABLE ASSY, USB, FOR DISPLAY i4000",
+        "quantite": 2,
+        "unite": "m",
+        "cout": 34.36,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0346",
+        "nom": "2W 3M DTM 12S A / NONE HDIN1 GPIO",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 20.95,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0352",
+        "nom": "POWER+CANBUS+EXT LIGHT CABLE 33M0118",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 0.0,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0353",
+        "nom": "LOCKOUT CABLE W/BYPASS FOR 33M0118",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 0.0,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33V0414",
+        "nom": "CABLE ASSY, DEUTSCH-USB, i4500",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 27.45,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "33X0016",
+        "nom": "MODULE TEST PROXIMITÉ SWITCH",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 291.79,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "39A0001",
+        "nom": "CAPT D'ANGLE ANALOGIQUE R1000 RECONDITIO",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 157.8,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "39A0061-80",
+        "nom": "SENSOR, ANGLE CANB. MF 360° W/GIRO REFUR",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 221.7,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "39BCB0096",
+        "nom": "PCB I/O JONCTION 2420 VERSION 2 RECONDIT",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 75.66,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "39BCB0097",
+        "nom": "PCB CPU 2420 VERSION 2 RECONDITIONNÉ",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 56.29,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "39BCB0304",
+        "nom": "PCB ASSY, CAN REEL ANGLE/LENGTH/A2B REFU",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 161.44,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "39D4500",
+        "nom": "I4500 DISPLAY 4.3 REFURB",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "39M0077",
+        "nom": "CONT CELLULE DE CHARGE CANBUS V RECOND",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 10.58,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "39M0105",
+        "nom": "CANBUS CENTRAL IO INTERFACE RECOND",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 105.4,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "39M0109",
+        "nom": "I4300 CANBUS CENTRAL IO INTERF REBUILT",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "39M0110",
+        "nom": "INTERFACE, RELAY, CANBUS, i4000 REBUILT",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "39M0118",
+        "nom": "I4000  EXCAV BASIC RELAY INTER REBUILT",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "39M0149",
+        "nom": "CAN ANGLE, LENGTH AND A2B INTERF REFURB",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 267.13,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "39S0016",
+        "nom": "CAPTEUR DE ROTATION CENTRÉ AVEC CONN. MI",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 157.12,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "39S0017",
+        "nom": "CAPTEUR DE ROTATION CENTRÉ AVEC CONN. MI",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 156.63,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "66O4000EP02",
+        "nom": "I4000 PROXIMITY (2) 12MM PNP LONG",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 106.76,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "66O4000EX-AN01",
+        "nom": "I4000 ANGLE (1) CANBUS MF W/GIRO 360°",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 282.85,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      },
+      {
+        "ref": "66O4000TH01",
+        "nom": "I4000STD LOCKOUT KIT FOR TELEHANDLER 12V",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 249.33,
+        "entrepot": "Camion #101",
+        "technicien": "David Hestin",
+        "localisation": "TECH 1"
+      }
+    ]
+  },
+  "tech_02": {
+    "technicien": "Pierre-Olivier Patry",
+    "camion": "Camion #102",
+    "localisation": "TECH 2",
+    "nb_articles": 231,
+    "articles": [
+      {
+        "ref": "11BFL0085",
+        "nom": "ÉTIQUETTE AUTO-COLLANTE LOGO RAYCOWYLIE",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 0.96,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11BFL0127",
+        "nom": "LABEL FOR BYPASS SWITCH 33M0100",
+        "quantite": 10,
+        "unite": "pcs",
+        "cout": 0.78,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11BFL0184",
+        "nom": "STICKER RAYCOWYLIE HORIZONTAL",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11EMA0200",
+        "nom": "CABLE, 2 WAY, 20 AWG, BLACK PVC JACKET",
+        "quantite": 80,
+        "unite": "m",
+        "cout": 0.61,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11EMA0400",
+        "nom": "CÂBLE 4 COND 20 AWG GAINE PVC (EP4M20P)",
+        "quantite": 80,
+        "unite": "m",
+        "cout": 1.27,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11EMA0600",
+        "nom": "CABLE 6 WAY,20 AWG,PVC JACKET OD MIN.8MM",
+        "quantite": 60,
+        "unite": "m",
+        "cout": 1.72,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11EMA0800",
+        "nom": "CABLE, 8W, 20 AWG,PVC JACKET,(EP8M20P)",
+        "quantite": 20,
+        "unite": "m",
+        "cout": 0.73,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11FNN0105",
+        "nom": "ÉCROU HEX M6 NYLON LOCK SS A2",
+        "quantite": 10,
+        "unite": "pcs",
+        "cout": 0.14,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11FWF1004",
+        "nom": "ROND PLATE #10 ZP 100/PQT (QVWF10Z)",
+        "quantite": 50,
+        "unite": "pqt",
+        "cout": 0.01,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11FWL1004",
+        "nom": "RONDELLE LOCK #10 ZP 100/PQT (QVWL10Z)",
+        "quantite": 75,
+        "unite": "pqt",
+        "cout": 0.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11GPP0071",
+        "nom": "HDT-48-00-CRIMPTOOL,DT/HD,SIZE 12,16,20",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 229.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HEC0041",
+        "nom": "BOUCHON NYCKEL M16 AVEC RONDELLE CAOUTCH",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 2.04,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HEG0140",
+        "nom": "GLAND NICKEL M12 90 DEG THREAD 6-7.5MM",
+        "quantite": 18,
+        "unite": "pcs",
+        "cout": 9.88,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HEG0510",
+        "nom": "GROMMET CAOUT 3/4 X 1/16 (QMG3/4)",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 0.58,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HEG0516",
+        "nom": "GROMMET CAOUT 7/8 X 1/4",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 1.34,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HEK0016",
+        "nom": "RAM SHORT DOUBLE SOCKET FOR 1 BALL",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 6.32,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HEK0018",
+        "nom": "RAM ROUND BASE 2.5  W/ 1 BALL",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 6.18,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HEK0020",
+        "nom": "SWIVEL RAM 1.5 DISPLAY MOUNT",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 34.45,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HEK0028",
+        "nom": "RAM ROUND BASE 2.5  W/ 1.5 BALL",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 9.27,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HEK0035",
+        "nom": "RAM DOUBLE BALL ADAPTER - B SIZE",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 10.54,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HEK0036",
+        "nom": "RAM DOUBLE SOCKET ARM - B SIZE MEDIUM",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 25.64,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HEK0037",
+        "nom": "RAM HANDLEBAR U-BOLT BASE B-SIZE",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 11.01,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HEL0003",
+        "nom": "GAINE PROTECT 1/2 (ERG500)",
+        "quantite": 25,
+        "unite": "m",
+        "cout": 0.12,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HEX0032",
+        "nom": "BATTERIE LITHIUM 3.6V 19Ah SIZE D",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 11.75,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HEX0040",
+        "nom": "BATTERIE LITHIUM AA CELL 1.5 VOLT",
+        "quantite": 8,
+        "unite": "pcs",
+        "cout": 3.62,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HMA0015",
+        "nom": "AIMANT32MMX7.8MM THREADS M6 MALE",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 2.23,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HMA0016",
+        "nom": "MAGNET 1-1/4X0.375 SCREW 10-32 (M5)",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 1.94,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HMC0011",
+        "nom": "MOUSQUETON MAILLE RAPIDE 5/16 (QMC5/16)",
+        "quantite": 7,
+        "unite": "pcs",
+        "cout": 1.37,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HMC0048",
+        "nom": "ENGRENAGE NO40, 20 DENTS FINISH BORE 5/8",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 7.35,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HMP0039",
+        "nom": "PLUG, PLASTIC, 5/16 DIA X 3/4",
+        "quantite": 50,
+        "unite": "pcs",
+        "cout": 0.12,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11HMP0050",
+        "nom": "SLOTTED SPRING PIN 1/16 X 5/8 SS",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 0.19,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11MEP0005",
+        "nom": "ACIER PLAQUE 12 GAUGE x 7.25 X 7.5",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 2.6,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11MPS0375",
+        "nom": "FEUILLE PLASTIQUE POLYTYLÈNE 3/8 X 4' X",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 4.51,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11SLE0005",
+        "nom": "LED BULB 30-5050SMD AC/DC 12V-24V",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 5.4,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11SRA0003",
+        "nom": "RELAY, SPDT 12V 30A BOSCH (0332209150",
+        "quantite": 6,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11SRA0004",
+        "nom": "RELAY, SPDT 24V 20A BOSCH (RY0332204203)",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 4.16,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11SRH0011",
+        "nom": "BASE DE RELAIS BOSH SUR FIL",
+        "quantite": 8,
+        "unite": "pcs",
+        "cout": 3.98,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11SSO0001",
+        "nom": "SWITCH, ROCKER, DPST, ON-NONE-ON 15A",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 28.9,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11SST0001",
+        "nom": "INTER À BASCULE DPDT ON-NONE-ON CUTLER H",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 14.61,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11SSX0016",
+        "nom": "CAPT PROX 12MM PNP, SHORT 5M",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 43.87,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11SSX0017",
+        "nom": "CAPT PROX 12MM PNP, LONG",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 32.16,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11SSX0018",
+        "nom": "CAPT PROX 8MM NPN, FLUSH MOUNT",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 27.07,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TCD0001",
+        "nom": "DEUTSCH PIN SIZE 16 (16-20 AWG)",
+        "quantite": 39,
+        "unite": "pcs",
+        "cout": 0.41,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TCD0002",
+        "nom": "CONNECTOR,DEUT.SOCKET S-16 (16-20 AWG)",
+        "quantite": 84,
+        "unite": "pcs",
+        "cout": 0.43,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TCD0004",
+        "nom": "DEUTSCH PIN SIZE 20 (20-24 AWG)",
+        "quantite": 34,
+        "unite": "pcs",
+        "cout": 0.41,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TCD0005",
+        "nom": "DEUTSCH SOCKET SIZE 20 (20-24 AWG)",
+        "quantite": 135,
+        "unite": "pcs",
+        "cout": 0.58,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TCD1020",
+        "nom": "CONN DEUTSCH DT SERIE RECEPT 2P MALE",
+        "quantite": 7,
+        "unite": "pcs",
+        "cout": 1.09,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TCD1021",
+        "nom": "CONN DEUTSCH DT SERIE PLUG 2S FEMALE",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 0.86,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TCD1022",
+        "nom": "CONN DEUTSCH SECONDARY LOCK 2 PIN",
+        "quantite": 7,
+        "unite": "pcs",
+        "cout": 0.12,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TCD1023",
+        "nom": "CONN DEUTSCH SECONDARY LOCK 2 SOCK",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 0.15,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TCD1025",
+        "nom": "CONN DEUTSCH BACK SHELL 2S SOCKET",
+        "quantite": 7,
+        "unite": "pcs",
+        "cout": 2.5,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TCP0013",
+        "nom": "CAN BUS M12 5P MALE 120 OHMS TERMINATOR",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 5.27,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TCP0018",
+        "nom": "CONNECTOR,M12 IN-LINE 120OHMS, TERM. RED",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 9.55,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TCV0201",
+        "nom": "CONN POUR VALVE SOLÉNOIDE 2S F TYPE PG9",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 26.51,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TFF0011",
+        "nom": "FUSIBLE 1A 3AG LENTE",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 0.25,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TFF4015",
+        "nom": "FUSIBLE 15A/32V MINI-BLADE RAPIDE",
+        "quantite": 29,
+        "unite": "pcs",
+        "cout": 3.03,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TFW0001",
+        "nom": "CAISSON DE FUSIBLE SUR FIL 20A MAX",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 11.11,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TFW0004",
+        "nom": "FUSE HOLDER BLADE MINI ATC/ATO 32V 10A",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 2.2,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11TSA0030",
+        "nom": "TERM FEMELLE 0.250 NON-ISOLÉ",
+        "quantite": 13,
+        "unite": "pcs",
+        "cout": 0.08,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0006",
+        "nom": "ADAPT EN COUDE 90° 12 ORF M X 12 ORF FSW",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 17.53,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0007",
+        "nom": "ADAPT EN COUDE 90° 16 ORF M X 16 ORF FSW",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 14.18,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0009",
+        "nom": "ADAPT EN COUDE 90° 8 ORF M X 8 ORF FSW",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 3.24,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0013",
+        "nom": "ADAPT EN COUDE 90° 8 ORF M X 8 ORB M (HE",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 3.7,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0019",
+        "nom": "ADAPT EN COUDE 90° 1/4 NPT FSW X 1/4 N",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 3.22,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0041",
+        "nom": "ADAPT EN COUDE 45° 12 JIC M X 12 JIC FSW",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 7.99,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0043",
+        "nom": "ADAPT EN COUDE 45° 8 JIC M X 8 JIC FSW (",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 4.17,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0063",
+        "nom": "ADAPT EN COUDE 90° 12 JIC FSW X 12 JIC M",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 7.77,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0069",
+        "nom": "ADAPT EN COUDE 90° 5 JIC F X 5 JIC M (HE",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 7.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0070",
+        "nom": "ADAPT EN COUDE 90° 6 JIC M X 6 JIC FSW (",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 2.46,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0071",
+        "nom": "ADAPT EN COUDE 90° 8 JIC M X 8 JIC FSW (",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 3.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0072",
+        "nom": "ADAPT EN COUDE 90° 12 ORB M X 12 JIC M (",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 8.11,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0077",
+        "nom": "ADAPT EN COUDE 90° 6 JIC M X 6 ORB M (HE",
+        "quantite": 6,
+        "unite": "pcs",
+        "cout": 2.91,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0079",
+        "nom": "COUDE #8 90DEG M ORB x M JIC HYDRAULIQUE",
+        "quantite": 7,
+        "unite": "pcs",
+        "cout": 1.59,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0086",
+        "nom": "ADAPT EN COUDE 90° 16 JIC M X  JIC FSW",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 8.29,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0095",
+        "nom": "ADAPT EN COUDE 90° 4 ORB M X 4 ORB F",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 8.48,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAE0098",
+        "nom": "ADAPT EN COUDE 90° 1/4 NPT FSW X 6 ORB",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 2.57,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAR8003",
+        "nom": "ADAPT RÉDUCTEUR 12 JIC F X 8 JIC M",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 2.26,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAR8005",
+        "nom": "ADAPT RÉDUCTEUR 16 JIC F X 12 JIC M (HEC",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 5.4,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAS1023",
+        "nom": "ADAPT DROIT 3/8 NPT F X 3/8 NPT F (HEC",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 1.04,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAS2039",
+        "nom": "ADAPT DROIT 1/4 NPT F X 6 JIC M (HEC525",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 1.02,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAS4004",
+        "nom": "ADAPT DROIT 8 JIC FSW X 8 ORB M (HE2266-",
+        "quantite": 9,
+        "unite": "pcs",
+        "cout": 7.99,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAS4009",
+        "nom": "ADAPT DROIT 12 ORB M X 12 JIC M (HEC5315",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 3.82,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAS4011",
+        "nom": "ADAPT DROIT 16 ORB M X 12 JIC M (HEC5315",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 7.47,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAS4016",
+        "nom": "ADAPT DROIT 16 ORB M X 16 JIC M (HEC5315",
+        "quantite": 6,
+        "unite": "pcs",
+        "cout": 5.4,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAS4023",
+        "nom": "ADAPT DROIT 8 ORB M X 8 JIC M (HEC5315X8",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 1.64,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAS4027",
+        "nom": "ADAPT DROIT 8 ORB M X 6 JIC M (HEC5315X6",
+        "quantite": 6,
+        "unite": "pcs",
+        "cout": 1.09,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAS6017",
+        "nom": "ADAPT DROIT 6 BSP M  X  1/4 NPT F",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 3.73,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAS6024",
+        "nom": "ADAPTEUR DROIT, 6 ORB M X 4 ORB F",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 1.52,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAS6028",
+        "nom": "ADAPT DROIT 1/4 NPT M X 4 ORB F STEEL",
+        "quantite": 9,
+        "unite": "pcs",
+        "cout": 1.75,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAS7014",
+        "nom": "ADAPT DROIT 6 ORF M X 8 ORB M",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 2.42,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAS7015",
+        "nom": "ADAPT DROIT 4 ORF M X 8 ORB M",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 1.93,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAS7017",
+        "nom": "ADAPT DROIT 6 ORF M X 6 ORF M",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAS8006",
+        "nom": "ADAPT DROIT 6 JIC M X 6 JIC M (HEC5305X6",
+        "quantite": 9,
+        "unite": "pcs",
+        "cout": 0.84,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAT0006",
+        "nom": "ADAPT EN T 12 JIC M X 2 X 12 JIC FSW CEN",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 14.8,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAT0014",
+        "nom": "ADAPT EN T 6 ORF M X 2 X FSW CENTRE (HE1",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 16.06,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAT0022",
+        "nom": "ADAPT EN T 12 ORF M X 2 X FSW BOUT (HE47",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 13.8,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAT0023",
+        "nom": "ADAPT EN T 16 ORF M X 2 X FSW BOUT (HE47",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 23.74,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAT0025",
+        "nom": "ADAPT EN T 8 ORF M X 2 X F BOUT (HE4706X",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 6.62,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAT0040",
+        "nom": "ADAPT EN T 12 JIC M X 2 X FSW BOUT (HEC5",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 6.17,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAT0041",
+        "nom": "ADAPT EN T 16 JIC M X 2 X FSW BOUT (HEC5",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 14.21,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAT0046",
+        "nom": "ADAPT EN T 6 JIC M X 2 X FSW BOUT (HEC57",
+        "quantite": 9,
+        "unite": "pcs",
+        "cout": 3.07,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAT0047",
+        "nom": "ADAPT EN T 8 JIC M X 2 X FSW BOUT (HEC57",
+        "quantite": 7,
+        "unite": "pcs",
+        "cout": 4.42,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAT0058",
+        "nom": "ADAPT EN T 6 JIC FSW X 3 (HEC9555-06)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 19.95,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAT0062",
+        "nom": "ADAPT EN T 6 BSP M X 2 X 6 BSP FSW BOUT",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 29.93,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAT0065",
+        "nom": "ADAPT EN T 12 BSP M X 2 X 12 BSP FSW BOU",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 45.05,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YAT0082",
+        "nom": "T ADAPT 8 JIC FSW  X  8 JIC M X 4 ORB F",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 12.19,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YVC0530",
+        "nom": "BOBINE VALVE HYDR  VICKERS 12 VDC 5000 P",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 37.96,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YVC0531",
+        "nom": "BOBINE VALVE HYDR  VICKERS 24 VDC 5000 P",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 27.51,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YVC0545",
+        "nom": "BOBINE VALVE HYDR PARKER 12 VDC HAUTE PR",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 33.3,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YVC0549",
+        "nom": "BOBINE VALVE HYDRAULIQUE PARKER 24 VDC H",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 41.1,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YVK1484",
+        "nom": "VALVE CLAPET HYDR 1/2  ORB 5000PSI  REM",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 37.26,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "11YVK1485",
+        "nom": "VALVE CLAPET HYDR 3/4 ORB 5000PSI REMPL",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 48.64,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22BCB0114",
+        "nom": "PCB ASSY, DATA LOGGER, i3000",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 222.14,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22EAA0200",
+        "nom": "CÂBLE 2 COND 18/2 + GAINE 3/8 (ZRF2)",
+        "quantite": 60,
+        "unite": "m",
+        "cout": 0.82,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22FXK0075",
+        "nom": "KIT INSTALLATION 33M0075-77-78",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 16.22,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KCF0092",
+        "nom": "BRACKET SUPPORT LORA GATEWAY  PAINTED",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 9.66,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0002",
+        "nom": "ROUE DENTÉE 5 DENTS 3-3/4 BLANC POUR CA",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 8.16,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0003",
+        "nom": "ROUE DENTÉE 5 DENTS 4 BLANC POUR CAT 33",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 17.91,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0004",
+        "nom": "ROUE DENTÉE 6 DENTS 3-1/4 BLANC (ZKCD6)",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 29.19,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0005",
+        "nom": "ROUE DENTÉE 6 DENTS 3-3/8 BLANC POUR SA",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 5.61,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0010",
+        "nom": "ROUE DENTÉE 12 DENTS 6 BLANC(ZKCD12)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 17.9,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0012",
+        "nom": "ROUE DENTÉE 13 DENTS 5-3/4 BLANC POUR G",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 15.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0014",
+        "nom": "ROUE DENTÉE 16 DENTS 6-1/2 BLEUE (ZKCD1",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 14.7,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0015",
+        "nom": "ROUE DENTÉE 17 DENTS 8 BLEUE (ZKCD17)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 19.78,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0016",
+        "nom": "ROUE DENTÉE 18 DENTS 5-1/4 BLEUE (ZKCD1",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 12.03,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0017",
+        "nom": "ROUE DENTÉE 19 DENTS 5-1/4 BLEUE POUR G",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 19.91,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0018",
+        "nom": "ROUE DENTÉE 22 DENTS 7-1/8 BLEUE POUR R",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 11.95,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0019",
+        "nom": "ROUE DENTÉE 25 DENTS 7 BLEUE (ZKCD25-7)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 19.28,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0024",
+        "nom": "ROUE DENTÉE 5 DENTS 5-1/2 BLEUE",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 10.37,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0025",
+        "nom": "ROUE DENTÉE 7 DENTS 6 POUR KOMATS",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 22.14,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0027",
+        "nom": "ROUE DENTÉE 5 DENTS BLANC POUR HITACHI 3",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 5.22,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0030",
+        "nom": "GEAR  14 DENTS 4-1/4 NOUVEAU MODEL",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 5.88,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0032",
+        "nom": "GEAR, 15 TEETH, 4-1/4po for NATIONAL 600",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 6.84,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0034",
+        "nom": "ROUE DENTÉE 5 DENTS POUR HITACHI 300 ET",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 3.45,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0038",
+        "nom": "ROUE DENTÉE 5 DENTS 3-3/4  BLANC",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 16.28,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0040",
+        "nom": "ROUE DENTÉE 14 DENTS 4.5  BLANC",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 24.2,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0044",
+        "nom": "ROUE DENTÉE 7 DENTS 3- 1/2  UHMW BLANC",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 7.55,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KGR0200",
+        "nom": "GEAR 40 FINISH BORE 20 DENTS 3/4",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 46.51,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KRF0010",
+        "nom": "BRACKET FOR A2B, END OF MAIN BOOM (KR91)",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 20.19,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KRH0850",
+        "nom": "ENGRENAGE 75 DENTS USINÉ PAT (KR085)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 37.46,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KRH0890",
+        "nom": "ENGRENAGE 59 DENTS TINS (KR089)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 15.4,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF0030",
+        "nom": "BRACKET FOR JONCTION BOX (KR900)",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 8.82,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF0032",
+        "nom": "ROT. SENSOR SUPPORT ADAPTOR, BACKHOE",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 7.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF0051",
+        "nom": "ENGRENAGE ANNEAU SEUL CAPTEUR HOR DIAMÈT",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 97.02,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF0098",
+        "nom": "BACK PLATE FOR  ANGLE SENSOR 33A0062",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 11.3,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF0116",
+        "nom": "33M0149 ADAPTOR PLATE FOR PAT REEL",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 1.58,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF0160",
+        "nom": "PLAQUE PEINTE POUR 33L0001(ZRG01), 33L00",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 13.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF0230",
+        "nom": "LUGS, 1/4 BOLT, ANGLE AND X-SMALL REEL",
+        "quantite": 36,
+        "unite": "pcs",
+        "cout": 4.52,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF0234",
+        "nom": "LUGS 1''1/2 LONG, BOUL 1/4''",
+        "quantite": 18,
+        "unite": "pcs",
+        "cout": 9.91,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF0255",
+        "nom": "LUGS, MOUNTING BOSS M5 Ø1/2, LENGTH 3/8",
+        "quantite": 42,
+        "unite": "pcs",
+        "cout": 9.23,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF0460",
+        "nom": "BRACKET, PLATE, PLAIN, 3/16 , SLEW SENS",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 2.6,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF0559",
+        "nom": "ROTATION SENSOR SWIVEL ADAPTOR MODIFIED",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 79.19,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF0580",
+        "nom": "SUPPORT À ROUE D'ENGRENAGE,W/SET SCREW",
+        "quantite": 12,
+        "unite": "pcs",
+        "cout": 21.59,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF0640",
+        "nom": "PLAQUE D'AJUST. CAPTEUR ROTATION",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 22.65,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF0644",
+        "nom": "KIT PLAQUE D'AJUST. CAPT. ROT. 33S0047",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 11.24,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF0677",
+        "nom": "ROTATION SENSOR SWIVEL ADAPTATOR V2",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 103.2,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF0678",
+        "nom": "ROT. SENSOR 12 TEETH GEAR ADAPTER",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 154.4,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF1580",
+        "nom": "SUPPORT À ROUE D'ENGRENAGE,W/SET SCREW",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 14.47,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF5020",
+        "nom": "BRAKET 5020 UNIVERSEL PRIMER",
+        "quantite": 17,
+        "unite": "pcs",
+        "cout": 1.58,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF5025",
+        "nom": "BRAKET 5020 JOHN D / HITA #1",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 22.38,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF5027",
+        "nom": "BRAKET 5020 UNIVERSEL DÉPLIÉ",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 13.58,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSF5028",
+        "nom": "BRAKET 5020 KOMATSU #3",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 16.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSH0670",
+        "nom": "FLEXIBLE SHAFT COUPLING 10 MM x 10 MM",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 33.55,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSK0016",
+        "nom": "ADAPTOR KIT,  ROTATION SENSOR, CBUS",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 82.49,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSK0032",
+        "nom": "KIT ESSIEU ET BOULONS CAPT ROT CANB",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 43.54,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KSK0038",
+        "nom": "ADAPTATEUR CAPT ROTATION ALU.",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 29.7,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22KYV0003",
+        "nom": "BY-PASS DE VALVE VICKERS 5000 PSI  ZP",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 21.12,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22SLE0034",
+        "nom": "WARNING LIGHT 12/24V AC/DC LED W/BRACKET",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 64.84,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "22SWC0040",
+        "nom": "WEIGHT&CHAIN ASSY, STANDARD (AX0013-3)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 115.71,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33A0001",
+        "nom": "SENSOR, ANGLE, ANALOG",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 595.2,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33A0061-80",
+        "nom": "SENSOR, ANGLE CANB. MF 360° W/GIRO BOOM",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 221.7,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33C0110",
+        "nom": "SENSOR, LOAD, RAYFLEX",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 248.92,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33C2001",
+        "nom": "SENSOR,LOAD PIN1K (ZRTP1K)(UK:LC0307-3)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 668.18,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33C2002",
+        "nom": "SENSOR, LOAD PIN, 2K",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 395.89,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33C2003",
+        "nom": "SENSOR,LOAD PIN 3K",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 391.75,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33C2004",
+        "nom": "SENSOR,LOAD PIN 4K (ZRTP4K)(UK:LC0310-3)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 455.86,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33C4002",
+        "nom": "SENSOR, PRESSURE, 300 BAR, mV output",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 244.17,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33C4040-B0",
+        "nom": "PRESS. SENSOR#1 400BAR J1939 M12 ORB4",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 229.4,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33E0001",
+        "nom": "SENSOR, LENGTH, POT IK 10T, W/O BRACKET",
+        "quantite": 7,
+        "unite": "pcs",
+        "cout": 32.41,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33E0010",
+        "nom": "CAPTEUR LONGUEUR POT 1K 5 TOURS",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 31.28,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33E9014",
+        "nom": "LENGTH SENSOR ANALOG+ KIT FOR REEL PAT",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 127.34,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33J0012",
+        "nom": "BOÎTIER JONCTION 12 POSITIONS 4 GLANDS (",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 77.27,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33J0017",
+        "nom": "JBOX REEL TO DUAL 12S MILITARY ATB W/BYP",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 133.45,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33J0023",
+        "nom": "BOÎTIER JONCTION DYNAMOMÈTRE 4 BORNES (Z",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 48.79,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33J0083",
+        "nom": "BOÎTIER JONCTION 12 POSITIONS 6 GLANDS",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 80.27,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33M0103",
+        "nom": "ANGLE SENSOR W/SILICON, CanBus",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 221.74,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33R0510",
+        "nom": "CABLE TRANSDUCER CANOPEN 2.3M IP67 -40°C",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 661.99,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0070",
+        "nom": "CÂBLE ASS, 2 COND, 25', CONN DIN, HYDRAU",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 57.23,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0103",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 3M",
+        "quantite": 2,
+        "unite": "m",
+        "cout": 14.22,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0104",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 4M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 14.04,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0105",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE M12, 5 M",
+        "quantite": 2,
+        "unite": "m",
+        "cout": 17.05,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0107",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 7M",
+        "quantite": 7,
+        "unite": "m",
+        "cout": 16.84,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0110",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE M12, 10 M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 19.51,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0115",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE,M12, 15 M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 25.42,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0226",
+        "nom": "5W 106 IN CAN 5P M12 / DT 6S W/BSHL",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 59.08,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0227",
+        "nom": "5W 12 IN CAN 5S M12 / DT 6P W/BSHL",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 34.3,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0266",
+        "nom": "CAN BUS CABLE MALE-FEMALE M12, 0,5M",
+        "quantite": 4,
+        "unite": "m",
+        "cout": 11.03,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0323-06",
+        "nom": "CAN BUS CABLE MALE-MALE M12, 6 M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 17.96,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0324",
+        "nom": "CAN BUS CABLE MALE-MALE M12, 2 M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 10.71,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0325",
+        "nom": "CABLE ASSY, CAN, FEMALE-FEMALE, M12, 1M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 10.28,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0335",
+        "nom": "CABLE POWER DISP i4000 6M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 27.51,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0338",
+        "nom": "CABLE ASSY, USB, FOR DISPLAY i4000",
+        "quantite": 5,
+        "unite": "m",
+        "cout": 34.36,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0339-01",
+        "nom": "CABLE I/0  DISP i4000 1M",
+        "quantite": 4,
+        "unite": "m",
+        "cout": 37.84,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0352",
+        "nom": "POWER+CANBUS+EXT LIGHT CABLE 33M0118",
+        "quantite": 3,
+        "unite": "m",
+        "cout": 0.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33V0353",
+        "nom": "LOCKOUT CABLE W/BYPASS FOR 33M0118",
+        "quantite": 2,
+        "unite": "m",
+        "cout": 0.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "33X0073",
+        "nom": "POLYESTER DRAWSTRING BAG I4XXX",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 3.49,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39A0001",
+        "nom": "CAPT D'ANGLE ANALOGIQUE R1000 RECONDITIO",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 157.8,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39A0061-81",
+        "nom": "SENSOR, ANGLE CANB. MF 360° W/GIRO REFUR",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 221.7,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39B2008",
+        "nom": "SWITCH, A2B, WIRELESS LORA 915MHZ REFURB",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 393.83,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39BCB0304",
+        "nom": "PCB ASSY, CAN REEL ANGLE/LENGTH/A2B REFU",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 161.44,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39C2002",
+        "nom": "LOAD PIN 2K RECONDITIONNÉ (YRTP2K)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 274.19,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39D4000",
+        "nom": "I4000 DISPLAY CONTROLLER 3.5 REBUILT",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39D4507",
+        "nom": "I4507 DISPLAY 7 W/BRACKET RECOND.",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39M0036",
+        "nom": "BOITE DE JONCTION R2420 RECONDITIONNEE (",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 300.18,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39M0077-01",
+        "nom": "CANBUS LOAD CELL INTERFACE WITH A2B",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 264.04,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39M0079",
+        "nom": "CONTROLEUR DE ROTATION CANBUS RECOND.",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 193.79,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39M0080",
+        "nom": "CANBUS CONTROLLER 5 RELAYS 12V, I3500",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 76.38,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39M0103",
+        "nom": "ANGLE SENSOR, CanBus, REBUILT",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 321.18,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39M0109",
+        "nom": "I4300 CANBUS CENTRAL IO INTERF REBUILT",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39M0110",
+        "nom": "INTERFACE, RELAY, CANBUS, i4000 REBUILT",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39M0118",
+        "nom": "I4000  EXCAV BASIC RELAY INTER REBUILT",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39M0122-B0",
+        "nom": "IN-LINE CAN BUS LOAD (SIG +/-)  W/CABLE",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 146.17,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39M0131",
+        "nom": "LORA CAN BUS GATEWAY 915MHZ REFURB",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 244.02,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "39S0017",
+        "nom": "CAPTEUR DE ROTATION CENTRÉ AVEC CONN. MI",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 156.63,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "65B38WSS0065-3",
+        "nom": "SHACKLE ASSY,6.5TE,SD,2.4GHZ,W890 D,B&C",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "66D4000E",
+        "nom": "I4000 BASE KIT EXCAVATOR IF(PROX/ELECT)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "66O4000EP01",
+        "nom": "I4000 PROXIMITY (2) 12MM PNP SHORT",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 106.76,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "66O4000EP02",
+        "nom": "I4000 PROXIMITY (2) 12MM PNP LONG",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 106.76,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "66O4000EX-SW01",
+        "nom": "I4000 ROTATION CANBUS STD BRACKET",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 691.52,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "66O4000TH01",
+        "nom": "I4000STD LOCKOUT KIT FOR TELEHANDLER 12V",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 249.33,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      },
+      {
+        "ref": "81YSP0009",
+        "nom": "PRES SW 1/4NP SPDT W/ DIN CONN",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 67.0,
+        "entrepot": "Camion #102",
+        "technicien": "Pierre-Olivier Patry",
+        "localisation": "TECH 2"
+      }
+    ]
+  },
+  "tech_03": {
+    "technicien": "Jean-François Allie",
+    "camion": "Camion #103",
+    "localisation": "TECH 3",
+    "nb_articles": 140,
+    "articles": [
+      {
+        "ref": "11EMA0200",
+        "nom": "CABLE, 2 WAY, 20 AWG, BLACK PVC JACKET",
+        "quantite": 20,
+        "unite": "m",
+        "cout": 0.61,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11EMA0800",
+        "nom": "CABLE, 8W, 20 AWG,PVC JACKET,(EP8M20P)",
+        "quantite": 45,
+        "unite": "m",
+        "cout": 0.73,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11GPP0070",
+        "nom": "CRIMP TOOL WITH TH1A TURRET HEAD",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 1.0,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11HEK0016",
+        "nom": "RAM SHORT DOUBLE SOCKET FOR 1 BALL",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 6.32,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11HEK0031",
+        "nom": "ADHESIVE ROUND BASE 3.5  W/ 1 BALL",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 9.26,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11HEK0037",
+        "nom": "RAM HANDLEBAR U-BOLT BASE B-SIZE",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 11.01,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11HEL0002",
+        "nom": "GAINE PROTECT 3/8 (ERG375)",
+        "quantite": 50,
+        "unite": "m",
+        "cout": 0.2,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11HMJ0093",
+        "nom": "JOINT D'ÉTANCHÉITÉ POUR ADAPT 1/4 BSP M",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 0.52,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11SRA0003",
+        "nom": "RELAY, SPDT 12V 30A BOSCH (0332209150",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11SRA0004",
+        "nom": "RELAY, SPDT 24V 20A BOSCH (RY0332204203)",
+        "quantite": 8,
+        "unite": "pcs",
+        "cout": 4.16,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11SSX0017",
+        "nom": "CAPT PROX 12MM PNP, LONG",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 32.16,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11SSX0018",
+        "nom": "CAPT PROX 8MM NPN, FLUSH MOUNT",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 27.07,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11TCD0001",
+        "nom": "DEUTSCH PIN SIZE 16 (16-20 AWG)",
+        "quantite": 75,
+        "unite": "pcs",
+        "cout": 0.41,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11TCD0002",
+        "nom": "CONNECTOR,DEUT.SOCKET S-16 (16-20 AWG)",
+        "quantite": 48,
+        "unite": "pcs",
+        "cout": 0.43,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11TCD1020",
+        "nom": "CONN DEUTSCH DT SERIE RECEPT 2P MALE",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 1.09,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11TCD1021",
+        "nom": "CONN DEUTSCH DT SERIE PLUG 2S FEMALE",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 0.86,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11TCD1022",
+        "nom": "CONN DEUTSCH SECONDARY LOCK 2 PIN",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 0.12,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11TCD1023",
+        "nom": "CONN DEUTSCH SECONDARY LOCK 2 SOCK",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 0.15,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11TCD1030",
+        "nom": "CONN DEUTSCH DT SERIE RECEPT 3P MALE",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 2.25,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11TCD1031",
+        "nom": "CONN DEUTSCH DT SERIE PLUG 3S FEMALE",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 1.65,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11TCD1032",
+        "nom": "CONN DEUTSCH SECONDARY LOCK 3 PIN",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.12,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11TCD1033",
+        "nom": "CONN DEUTSCH SECONDARY LOCK 3 SOCK",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.12,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11TCP0013",
+        "nom": "CAN BUS M12 5P MALE 120 OHMS TERMINATOR",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 5.27,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11TCP0018",
+        "nom": "CONNECTOR,M12 IN-LINE 120OHMS, TERM. RED",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 9.55,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11TFF4015",
+        "nom": "FUSIBLE 15A/32V MINI-BLADE RAPIDE",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 3.03,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11TFW0001",
+        "nom": "CAISSON DE FUSIBLE SUR FIL 20A MAX",
+        "quantite": 20,
+        "unite": "pcs",
+        "cout": 11.11,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11TFW0005",
+        "nom": "FUSE HOLDER BLADE  ATC/ATO 32V 10A",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YAE0009",
+        "nom": "ADAPT EN COUDE 90° 8 ORF M X 8 ORF FSW",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 3.24,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YAS2012",
+        "nom": "ADAPT DROIT 16 JIC FSW X 15/16 NPT M (H",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 14.15,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YAS3010",
+        "nom": "ADAPT DROIT 3/8 NPT FSW X 8 ORB M (HE93",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 3.02,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YAS4004",
+        "nom": "ADAPT DROIT 8 JIC FSW X 8 ORB M (HE2266-",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 7.99,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YAS4009",
+        "nom": "ADAPT DROIT 12 ORB M X 12 JIC M (HEC5315",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 3.82,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YAS6020",
+        "nom": "ADAPT DROIT 4 BSP M X 1/4 NPT F",
+        "quantite": 20,
+        "unite": "pcs",
+        "cout": 4.93,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YAS6029",
+        "nom": "ADAPT DROIT M.JIC (-04) X F.BSPP (-04)",
+        "quantite": 13,
+        "unite": "pcs",
+        "cout": 5.15,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YAS7002",
+        "nom": "ADAPT DROIT 6 ORF FSW X 6 JIC M (HE4200-",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 13.41,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YAT0017",
+        "nom": "ADAPT EN T 10 ORF M X 2 X FSW BOUT (HE21",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 41.75,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YAT0022",
+        "nom": "ADAPT EN T 12 ORF M X 2 X FSW BOUT (HE47",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 13.8,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YAT0023",
+        "nom": "ADAPT EN T 16 ORF M X 2 X FSW BOUT (HE47",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 23.74,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YAT0024",
+        "nom": "ADAPT EN T 6 ORF M X 2 X F BOUT (HE4706X",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 4.32,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YAT0068",
+        "nom": "ADAPT EN T 8 ORF M X  8 ORF FSW X 6 ORB",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 12.44,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YAT0070",
+        "nom": "ADAPT EN T 12 ORF M X  12 ORF FSW X 6 OR",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 11.91,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YVA0583",
+        "nom": "VALVE HYDR HYDAC",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YVC0531",
+        "nom": "BOBINE VALVE HYDR  VICKERS 24 VDC 5000 P",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 27.51,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YVC0549",
+        "nom": "BOBINE VALVE HYDRAULIQUE PARKER 24 VDC H",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 41.1,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "11YVC0555",
+        "nom": "BOBINE VALVE HYDR HYDAC 12 VDC",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 24.63,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22BCB0096",
+        "nom": "PCB ASSY, I/O JONCTION 2420, VERSION 2",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 64.16,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22BCB0097",
+        "nom": "PCB ASSY, CPU 2420, VERSION 2",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 121.09,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22BCB0118",
+        "nom": "PCB ASSY, i3000, RELAIS VERSION 104",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 80.94,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22BCB0199",
+        "nom": "PCB ASSY, ADAPTOR FOR PROXIMITY SWITCHES",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 77.42,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22EAA0200",
+        "nom": "CÂBLE 2 COND 18/2 + GAINE 3/8 (ZRF2)",
+        "quantite": 130,
+        "unite": "m",
+        "cout": 0.82,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22FXK0106",
+        "nom": "INSTALLATION KIT, 33M0106+SEE USER DEF",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 1.97,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22FXK4500",
+        "nom": "INSTALLATION KIT, i4000/i4500 DISPLAY",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 2.15,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KGR0001",
+        "nom": "ROUE DENTÉE 5 DENTS 3-1/4 BLANC CAT325L",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 10.75,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KGR0002",
+        "nom": "ROUE DENTÉE 5 DENTS 3-3/4 BLANC POUR CA",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 8.16,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KGR0003",
+        "nom": "ROUE DENTÉE 5 DENTS 4 BLANC POUR CAT 33",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 17.91,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KGR0005",
+        "nom": "ROUE DENTÉE 6 DENTS 3-3/8 BLANC POUR SA",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 5.61,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KGR0007",
+        "nom": "ROUE DENTÉE 9 DENTS 4-1/2 BLANC POUR HI",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 7.2,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KGR0024",
+        "nom": "ROUE DENTÉE 5 DENTS 5-1/2 BLEUE",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 10.37,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KGR0027",
+        "nom": "ROUE DENTÉE 5 DENTS BLANC POUR HITACHI 3",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 5.22,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KGR0034",
+        "nom": "ROUE DENTÉE 5 DENTS POUR HITACHI 300 ET",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 3.45,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KGR0044",
+        "nom": "ROUE DENTÉE 7 DENTS 3- 1/2  UHMW BLANC",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 7.55,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KGR0200",
+        "nom": "GEAR 40 FINISH BORE 20 DENTS 3/4",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 46.51,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KRF0001",
+        "nom": "GUIDE DE CÂBLE (+ BUSHING DE PLASTIQUE)",
+        "quantite": 2,
+        "unite": "m",
+        "cout": 6.44,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KRF0002",
+        "nom": "CABLE GUIDE 10 OR A2B SWITCH  BRACKET",
+        "quantite": 3,
+        "unite": "m",
+        "cout": 7.74,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KRH0850",
+        "nom": "ENGRENAGE 75 DENTS USINÉ PAT (KR085)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 37.46,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KSF0032",
+        "nom": "ROT. SENSOR SUPPORT ADAPTOR, BACKHOE",
+        "quantite": 6,
+        "unite": "pcs",
+        "cout": 7.0,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KSF0255",
+        "nom": "LUGS, MOUNTING BOSS M5 Ø1/2, LENGTH 3/8",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 9.23,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KSF0466",
+        "nom": "MOUNTING BRACKET SWING FRAME 3CX/4CX",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 4.75,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KSF0468",
+        "nom": "TOP SLEW ENCODER BRACKET 3CX/4CX",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KSF0469",
+        "nom": "BOTTOM SLEW ENCODER BRACKET 3CX/4CX",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 3.17,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KSF0580",
+        "nom": "SUPPORT À ROUE D'ENGRENAGE,W/SET SCREW",
+        "quantite": 7,
+        "unite": "pcs",
+        "cout": 21.59,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KSF0640",
+        "nom": "PLAQUE D'AJUST. CAPTEUR ROTATION",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 22.65,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KSF0642",
+        "nom": "GASKET POUR PLAQUE D'AJUSTEMENT DE CAPTE",
+        "quantite": 6,
+        "unite": "pcs",
+        "cout": 2.39,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KSF1580",
+        "nom": "SUPPORT À ROUE D'ENGRENAGE,W/SET SCREW",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 14.47,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KSF5020",
+        "nom": "BRAKET 5020 UNIVERSEL PRIMER",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 1.58,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KSF5025",
+        "nom": "BRAKET 5020 JOHN D / HITA #1",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 22.38,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KSF5028",
+        "nom": "BRAKET 5020 KOMATSU #3",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 16.0,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KSF5029",
+        "nom": "BRAKET 5020  #4 PRIMER",
+        "quantite": 6,
+        "unite": "pcs",
+        "cout": 21.75,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KSK0017",
+        "nom": "ADAPTATEUR CAPT ROTATION CANBUS",
+        "quantite": 5,
+        "unite": "pcs",
+        "cout": 61.3,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KSK0038",
+        "nom": "ADAPTATEUR CAPT ROTATION ALU.",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 29.7,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22KYV0003",
+        "nom": "BY-PASS DE VALVE VICKERS 5000 PSI  ZP",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 21.12,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22SLE0034",
+        "nom": "WARNING LIGHT 12/24V AC/DC LED W/BRACKET",
+        "quantite": 6,
+        "unite": "pcs",
+        "cout": 64.84,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22SRK0004",
+        "nom": "LOOP KIT, 5/32 ASSY, LARGE OPENING",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 11.71,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "22SRK0005",
+        "nom": "LOOP KIT 5/32 ASSEMBLY, SMALL OPENING",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 9.26,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33A0047",
+        "nom": "SENSOR, ANGLE, ANALOG, MEGA +/-180°",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 153.5,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33A0061-80",
+        "nom": "SENSOR, ANGLE CANB. MF 360° W/GIRO BOOM",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 221.7,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33A0061-81",
+        "nom": "ANG SENS CANBUS MF 360° W/GIRO 2ND",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 226.69,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33A0061-82",
+        "nom": "ANG SENS CANBUS MF 360° W/GIRO 3RD",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 226.69,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33C2003",
+        "nom": "SENSOR,LOAD PIN 3K",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 391.75,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33D4020",
+        "nom": "MANETTE 4020, 4010 SYSCOMAK VERSION 2 SÉ",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 163.63,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33D5020",
+        "nom": "MANETTE 5020, 5010 SYSCOMAK SÉRIE#",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 216.77,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33E0001",
+        "nom": "SENSOR, LENGTH, POT IK 10T, W/O BRACKET",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 32.41,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33M0077",
+        "nom": "CAN BUS LOAD CELL INTERFACE",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 256.8,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33M0080",
+        "nom": "CANBUS INTERFACE 5 RELAY 12V",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 558.12,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33M0110",
+        "nom": "INTERFACE, RELAY, CAN BUS, i4000",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 408.25,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33S0017",
+        "nom": "SENSOR, ROTARY ENCODER 128P w/MIL. CONN.",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 156.63,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33S0047-D2",
+        "nom": "ABSOLUTE, ENCODER, 24 BITS, SLEW",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 558.99,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0005",
+        "nom": "CÂBLE ASS 3 COND POUR CAPTEUR D'ANGLE",
+        "quantite": 2,
+        "unite": "m",
+        "cout": 60.49,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0060",
+        "nom": "CÂBLE POUR CAPTEUR DE ROTATION CENTRÉ 33",
+        "quantite": 2,
+        "unite": "m",
+        "cout": 77.91,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0070",
+        "nom": "CÂBLE ASS, 2 COND, 25', CONN DIN, HYDRAU",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 57.23,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0101",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 1M",
+        "quantite": 3,
+        "unite": "m",
+        "cout": 11.51,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0102",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 2M",
+        "quantite": 2,
+        "unite": "m",
+        "cout": 11.81,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0103",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 3M",
+        "quantite": 8,
+        "unite": "m",
+        "cout": 14.22,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0106",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 6M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 18.05,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0107",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 7M",
+        "quantite": 12,
+        "unite": "m",
+        "cout": 16.84,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0108",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE, M12, 8M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 19.41,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0115",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE,M12, 15 M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 25.42,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0120",
+        "nom": "CABLE ASSY, CAN, MALE-FEMALE M12, 20 M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 29.89,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0260-03",
+        "nom": "CABLE ASSY,CANBus/DT 6S, 90DEG.2.4M(7'8)",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 29.41,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0335",
+        "nom": "CABLE POWER DISP i4000 6M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 27.51,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0336",
+        "nom": "CABLE CANBUS DISP i4000 0,5M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 32.03,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0336-01",
+        "nom": "CABLE CANBUS DISP i4000 1M",
+        "quantite": 1,
+        "unite": "m",
+        "cout": 30.49,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0338",
+        "nom": "CABLE ASSY, USB, FOR DISPLAY i4000",
+        "quantite": 3,
+        "unite": "m",
+        "cout": 34.36,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0339-01",
+        "nom": "CABLE I/0  DISP i4000 1M",
+        "quantite": 3,
+        "unite": "m",
+        "cout": 37.84,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0348",
+        "nom": "CABLE ASSY, 8HDOUT 4HDIN REL i4000 3M",
+        "quantite": 2,
+        "unite": "m",
+        "cout": 56.14,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0352",
+        "nom": "POWER+CANBUS+EXT LIGHT CABLE 33M0118",
+        "quantite": 2,
+        "unite": "m",
+        "cout": 0.0,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0362",
+        "nom": "DT6S-CAN F 0,5M UPGRADE 3500 TO 4500",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 37.13,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0383",
+        "nom": "GRAY BYPASS RECEPT 33M0118 (33V0353)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 18.9,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33V0414",
+        "nom": "CABLE ASSY, DEUTSCH-USB, i4500",
+        "quantite": 2,
+        "unite": "m",
+        "cout": 27.45,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "33X0016",
+        "nom": "MODULE TEST PROXIMITÉ SWITCH",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 291.79,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "39A0061-80",
+        "nom": "SENSOR, ANGLE CANB. MF 360° W/GIRO REFUR",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 221.7,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "39BCB0144",
+        "nom": "CIRCUIT I/O POUR CONTRÔLEUR D'ÉTÂT DE CH",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 67.67,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "39BCB0153",
+        "nom": "CIRCUIT I/O POUR CONTRÔLEUR W3100 ET MAX",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 98.95,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "39BCB2097",
+        "nom": "PCB CPU 2420 VER 2 RECOND W/PATCH 5020",
+        "quantite": 4,
+        "unite": "pcs",
+        "cout": 107.21,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "39D2421",
+        "nom": "AFFICHAGE R2420 VERSION 2 RECONDITIONNÉ",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 83.19,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "39D4000",
+        "nom": "I4000 DISPLAY CONTROLLER 3.5 REBUILT",
+        "quantite": 2,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "39D4500",
+        "nom": "I4500 DISPLAY 4.3 REFURB",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "39M0079",
+        "nom": "CONTROLEUR DE ROTATION CANBUS RECOND.",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 193.79,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "39M0080-01",
+        "nom": "CANBUS INTERFACE 5 RELAY 12V RETROFIT",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 451.41,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "39M0103",
+        "nom": "ANGLE SENSOR, CanBus, REBUILT",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 321.18,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "39M0105",
+        "nom": "CANBUS CENTRAL IO INTERFACE RECOND",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 105.4,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "39M0109",
+        "nom": "I4300 CANBUS CENTRAL IO INTERF REBUILT",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "39M0118",
+        "nom": "I4000  EXCAV BASIC RELAY INTER REBUILT",
+        "quantite": 3,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "39M0149",
+        "nom": "CAN ANGLE, LENGTH AND A2B INTERF REFURB",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 267.13,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "39S0047-D2",
+        "nom": "ENCODEUR  ABSOLUE 24 BITS SLEW RECOND",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "66D4000E",
+        "nom": "I4000 BASE KIT EXCAVATOR IF(PROX/ELECT)",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 0.0,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "66O4000EP02",
+        "nom": "I4000 PROXIMITY (2) 12MM PNP LONG",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 106.76,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "66O4000EX-AN01",
+        "nom": "I4000 ANGLE (1) CANBUS MF W/GIRO 360°",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 282.85,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "66O4000EX-SW01",
+        "nom": "I4000 ROTATION CANBUS STD BRACKET",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 691.52,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      },
+      {
+        "ref": "66O4000TH01",
+        "nom": "I4000STD LOCKOUT KIT FOR TELEHANDLER 12V",
+        "quantite": 1,
+        "unite": "pcs",
+        "cout": 249.33,
+        "entrepot": "Camion #103",
+        "technicien": "Jean-François Allie",
+        "localisation": "TECH 3"
+      }
+    ]
+  }
+}

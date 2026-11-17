@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RaycoFieldService • Présentation Officielle & Démo Complète</title>
+  <style>
+    :root {
+      --primary: #D1001F;
+      --primary-dark: #8B0000;
+      --primary-light: #FFECEF;
+      --bg: #0B1120;
+      --card-bg: #151F32;
+      --card-inner: #1E293B;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --accent-blue: #38BDF8;
+      --accent-green: #34D399;
+      --accent-amber: #FBBF24;
+      --accent-purple: #A78BFA;
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* En-tête */
+    header {
+      background: rgba(11, 17, 32, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .badge-logo {
+      background: var(--primary);
+      color: white;
+      font-weight: 900;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 15px;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 14px rgba(209, 0, 31, 0.45);
+    }
+
+    .brand-text h1 {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .brand-text p {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 4px 12px rgba(209, 0, 31, 0.35);
+    }
+    .btn-primary:hover { background: #b0001a; transform: translateY(-1px); }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.15); }
+
+    /* Slider Container */
+    .deck-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 20px;
+      position: relative;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      max-width: 1160px;
+      min-height: 600px;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6);
+      padding: 42px 48px;
+      position: relative;
+      animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .slide.active { display: flex; flex-direction: column; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Style Couverture & Fin */
+    .slide-cover {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(145deg, #151f32 0%, #0d1525 100%);
+      border-top: 6px solid var(--primary);
+      padding: 56px 36px;
+    }
+
+    .cover-badge {
+      display: inline-block;
+      background: rgba(209, 0, 31, 0.15);
+      color: #ff526d;
+      border: 1px solid rgba(209, 0, 31, 0.4);
+      padding: 6px 18px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .cover-title {
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+      background: linear-gradient(to right, #ffffff, #f1f5f9);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .cover-subtitle {
+      font-size: 19px;
+      color: var(--text-muted);
+      max-width: 860px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .cover-meta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .meta-tag {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Slide Standard */
+    .slide-header {
+      margin-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 16px;
+    }
+
+    .slide-category {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #ff526d;
+      margin-bottom: 6px;
+    }
+
+    .slide-title {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .slide-body {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1.45fr 1fr;
+      gap: 36px;
+    }
+
+    .points-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .point-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #e2e8f0;
+    }
+
+    .point-icon {
+      background: rgba(209, 0, 31, 0.18);
+      color: #ff526d;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      font-weight: bold;
+    }
+
+    .cards-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      justify-content: center;
+    }
+
+    .feature-card {
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-left: 4px solid var(--primary);
+      padding: 16px 18px;
+      border-radius: 12px;
+      transition: transform 0.2s ease;
+    }
+    .feature-card:hover { transform: translateX(4px); background: rgba(255, 255, 255, 0.06); }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .badge-pill {
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .pill-blue { background: rgba(56, 189, 248, 0.2); color: #38bdf8; }
+    .pill-green { background: rgba(52, 211, 153, 0.2); color: #34d399; }
+    .pill-amber { background: rgba(251, 191, 36, 0.2); color: #fbbf24; }
+    .pill-red { background: rgba(209, 0, 31, 0.2); color: #ff526d; }
+
+    /* Footer */
+    footer {
+      background: rgba(11, 17, 32, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      bottom: 0;
+      z-index: 100;
+    }
+
+    .progress-bar-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: var(--primary);
+      width: 7%;
+      transition: width 0.3s ease;
+    }
+
+    .counter {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .keyboard-hint {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-right: 14px;
+    }
+
+    .keyboard-hint kbd {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: inherit;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="badge-logo">RAYCO WYLIE</div>
+      <div class="brand-text">
+        <h1>RaycoFieldService • Présentation Technique & Fonctionnelle</h1>
+        <p>Plateforme Intégrale de Gestion Terrain • Windows &amp; Android</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <a href="RaycoFieldService_Presentation.pptx" download class="btn btn-secondary">
+        📥 Télécharger PowerPoint (.PPTX)
+      </a>
+      <button onclick="toggleFullscreen()" class="btn btn-secondary">
+        ⛶ Plein écran
+      </button>
+    </div>
+  </header>
+
+  <main class="deck-container">
+
+    <!-- Diapositive 1 : Couverture -->
+    <div class="slide slide-cover active">
+      <span class="cover-badge">SYSTÈME OFFICIEL DE SERVICE TERRAIN</span>
+      <h2 class="cover-title">RaycoFieldService</h2>
+      <p class="cover-subtitle">
+        L'écosystème numérique complet conçu pour les techniciens spécialistes de grues et systèmes de levage Rayco Wylie. Interventions en direct, horodatage certifié, inventaire camions, scanner IA, feuilles de temps et synchronisation cloud instantanée.
+      </p>
+      <div class="cover-meta">
+        <div class="meta-tag">💻 <strong>Windows Desktop</strong> (Bureau &amp; PDF Natif)</div>
+        <div class="meta-tag">📱 <strong>Android APK</strong> (Route, Caméra &amp; GPS)</div>
+        <div class="meta-tag">☁️ <strong>Supabase Cloud</strong> (Temps Réel &amp; Multi-Postes)</div>
+        <div class="meta-tag">🔒 <strong>NIP Personnel</strong> (Sécurité RH &amp; Dépenses)</div>
+      </div>
+    </div>
+
+    <!-- Diapositive 2 : Vision & Enjeux -->
+    <div class="slide">
+      <div class="slide-header">
+        <div class="slide-category">Enjeux &amp; Vision</div>
+        <h2 class="slide-title">Moderniser &amp; Fiabiliser le Service Terrain</h2>
+      </div>
+      <div class="slide-body">
+        <div class="points-list">
+          <div class="point-item">
+            <div class="point-icon">✓</div>
+            <div><strong>Zéro Papier &amp; Zéro Perte :</strong> Remplacement définitif des formulaires manuscrits, illisibles ou égarés entre le chantier et le bureau.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">✓</div>
+            <div><strong>Traçabilité Totale des Heures :</strong> Découpage certifié automatique entre trajet aller/retour, chantier actif, pauses et attente facturable.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">✓</div>
+            <div><strong>Saisie Continue sur le Terrain :</strong> Ajout direct des photos, notes et pièces utilisées au fur et à mesure des travaux, avant même la clôture.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">✓</div>
+            <div><strong>Économie de Temps Majeure :</strong> Plus d'1h30 de formalités administratives économisée chaque jour par technicien.</div>
+          </div>
+        </div>
+        <div class="cards-panel">
+          <div class="feature-card">
+            <div class="card-title">📄 Standardisation Rayco Wylie <span class="badge-pill pill-red">Norme</span></div>
+            <div class="card-desc">Contrôles de sécurité conformes aux normes CSA/OSHA pour grues téléscopiques, mobiles et nacelles.</div>
+          </div>
+          <div class="feature-card">
+            <div class="card-title">⏱️ Zéro Litige Facturation <span class="badge-pill pill-green">Certifié</span></div>
+            <div class="card-desc">Horodatage précis dès le départ jusqu'à la signature client éliminant toute contestation d'heures.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diapositive 3 : Architecture & Synchro Temps Réel -->
+    <div class="slide">
+      <div class="slide-header">
+        <div class="slide-category">Architecture Système</div>
+        <h2 class="slide-title">Multiplateforme &amp; Synchronisation Cloud Parfaite</h2>
+      </div>
+      <div class="slide-body">
+        <div class="points-list">
+          <div class="point-item">
+            <div class="point-icon">⚡</div>
+            <div><strong>Supabase Realtime PostgreSQL :</strong> Flux WebSocket bidirectionnel instantané. Dès qu'une modification survient, tous les appareils sont mis à jour sans recharger.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">🔄</div>
+            <div><strong>Heartbeat Silencieux 10s :</strong> Auto-synchronisation intelligente d'arrière-plan pour assurer la cohérence entre Android et Windows en permanence.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">🛡️</div>
+            <div><strong>Suppression Multi-Appareils Blindée :</strong> Les interventions supprimées sur un poste s'effacent instantanément sur toute la flotte sans réapparaître.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">📶</div>
+            <div><strong>Résilience Hors-Ligne (Offline First) :</strong> Les données restent éditables en zone blanche et se synchronisent dès le retour du réseau.</div>
+          </div>
+        </div>
+        <div class="cards-panel">
+          <div class="feature-card">
+            <div class="card-title">🖥️ Windows Desktop <span class="badge-pill pill-blue">PC</span></div>
+            <div class="card-desc">Idéal pour le superviseur et le bureau. Affichage complet, génération de rapports et archivage automatique.</div>
+          </div>
+          <div class="feature-card">
+            <div class="card-title">📱 Android APK <span class="badge-pill pill-green">Mobile</span></div>
+            <div class="card-desc">Optimisé pour téléphones de cabine. Intégration GPS, saisie tactile et scanner de reçus par caméra.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diapositive 4 : Tableau de Bord & Dispatch -->
+    <div class="slide">
+      <div class="slide-header">
+        <div class="slide-category">Dispatch &amp; Pilotage</div>
+        <h2 class="slide-title">Tableau de Bord &amp; Fiches d'Intervention Riches</h2>
+      </div>
+      <div class="slide-body">
+        <div class="points-list">
+          <div class="point-item">
+            <div class="point-icon">📋</div>
+            <div><strong>Données Clients &amp; Références :</strong> Numéro de commande (CO-xxxxx), bon de commande client (#PO), référence (#TF) et contact chantier avec appel en un clic.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">🏗️</div>
+            <div><strong>Équipements Rayco Wylie :</strong> Suivi du type de machine, marque, modèle, numéro d'unité (#GR), numéro de série et modèle de système (i4500 RCI, etc.).</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">🎯</div>
+            <div><strong>Filtrage Superviseur Instantané :</strong> Filtre par technicien ou vue globale de tous les chantiers en cours avec indicateurs visuels de priorité.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">⏱️</div>
+            <div><strong>Cycle de Vie Dynamique :</strong> Progression pas à pas : <em>En attente ➔ En route ➔ Arrivé / Chantier ➔ Pause ➔ Complété</em>.</div>
+          </div>
+        </div>
+        <div class="cards-panel">
+          <div class="feature-card">
+            <div class="card-title">🧭 Barre d'Outils Contextuelle <span class="badge-pill pill-amber">Rapide</span></div>
+            <div class="card-desc">Boutons d'accès direct sur chaque fiche : 📸 Photos, 📝 Notes de service et 🔩 Gestion des pièces.</div>
+          </div>
+          <div class="feature-card">
+            <div class="card-title">📞 Actions d'Urgence <span class="badge-pill pill-blue">1-Clic</span></div>
+            <div class="card-desc">Lancement direct d'un appel téléphonique ou guidage routier sans copier-coller l'adresse.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diapositive 5 : Navigation & Horodateur Trajet -->
+    <div class="slide">
+      <div class="slide-header">
+        <div class="slide-category">Mobilité &amp; Géolocalisation</div>
+        <h2 class="slide-title">Départ Immédiat &amp; Navigation Google Maps</h2>
+      </div>
+      <div class="slide-body">
+        <div class="points-list">
+          <div class="point-item">
+            <div class="point-icon">📍</div>
+            <div><strong>Navigation en 1 Clic :</strong> Le bouton « Démarrer le trajet » ouvre Google Maps avec l'adresse du chantier pré-remplie et lance le chronomètre.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">🚗</div>
+            <div><strong>Calcul Kilométrique &amp; GPS :</strong> Coordonnées de départ et d'arrivée mémorisées pour validation précise du déplacement facturable.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">⏸️</div>
+            <div><strong>Gestion des Imprévus de Route :</strong> Mise en pause du trajet pour essence ou embouteillage sans fausser le temps d'intervention sur site.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">🏁</div>
+            <div><strong>Confirmation d'Arrivée :</strong> Déclenche automatiquement l'horodatage de début de chantier et passe le statut à « Arrivé ».</div>
+          </div>
+        </div>
+        <div class="cards-panel">
+          <div class="feature-card">
+            <div class="card-title">⏱️ Horodateur Automatique <span class="badge-pill pill-green">Précis</span></div>
+            <div class="card-desc">Horodatage officiel certifié pour calcul exact du temps de route versus temps machine.</div>
+          </div>
+          <div class="feature-card">
+            <div class="card-title">🗺️ Compatibilité Double <span class="badge-pill pill-blue">OS</span></div>
+            <div class="card-desc">Intents Google Maps natifs sur Android et ouverture du navigateur cartographique sur Windows.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diapositive 6 : Pièces & Notes Pendant l'Intervention -->
+    <div class="slide">
+      <div class="slide-header">
+        <div class="slide-category">Productivité Chantier</div>
+        <h2 class="slide-title">Ajout des Pièces, Notes &amp; Photos en Direct</h2>
+      </div>
+      <div class="slide-body">
+        <div class="points-list">
+          <div class="point-item">
+            <div class="point-icon">🔩</div>
+            <div><strong>Ajout de Pièces sur la Page Principale :</strong> Le technicien peut ajouter les composantes utilisées directement pendant l'intervention via le bouton <code>🔩 + Pièce</code>.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">🔄</div>
+            <div><strong>Synchronisation Cloud Immédiate :</strong> Les pièces saisies sont enregistrées dans Supabase et pré-remplies automatiquement à l'ouverture du rapport final.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">📸</div>
+            <div><strong>Galerie Photos Chantier Dédiée :</strong> Prise de vue avant/après intervention, identification de capteurs défectueux et photos d'ensemble.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">📝</div>
+            <div><strong>Notes de Service Partagées :</strong> Consignes d'accès, historique mécanique et observations transmises en direct au bureau de dispatch.</div>
+          </div>
+        </div>
+        <div class="cards-panel">
+          <div class="feature-card">
+            <div class="card-title">➕ Ajustement Rapide <span class="badge-pill pill-amber">Nouveau</span></div>
+            <div class="card-desc">Incrémentez/décrémentez les quantités en direct (+ / -) avec affichage du stock disponible par camion.</div>
+          </div>
+          <div class="feature-card">
+            <div class="card-title">📑 Zéro Oubli au Rapport <span class="badge-pill pill-green">Gain</span></div>
+            <div class="card-desc">Tout ce qui a été noté sur le chantier se retrouve automatiquement injecté dans le rapport officiel.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diapositive 7 : Clôture & Format AAMMJJHHNN -->
+    <div class="slide">
+      <div class="slide-header">
+        <div class="slide-category">Rapport &amp; Facturation</div>
+        <h2 class="slide-title">Rapports Officiels &amp; Numérotation AAMMJJHHNN</h2>
+      </div>
+      <div class="slide-body">
+        <div class="points-list">
+          <div class="point-item">
+            <div class="point-icon">🏷️</div>
+            <div><strong>Nouveau Format de Rapport (AAMMJJHHNN) :</strong> Numérotation chronologique standardisée (Année, Mois, Jour, Heure, Minute - ex : <code>2610071648</code>).</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">🛡️</div>
+            <div><strong>Grille des 6 Contrôles Rayco Wylie :</strong> Câbles A2B, seuils d'afficheur cabine, solénoïdes de coupure, faisceaux, tables de charge et fixations.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">✍️</div>
+            <div><strong>Signature Client Tactile :</strong> Recueil de la signature sur écran avec nom du représentant et horodatage certifié sur le PDF.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">📄</div>
+            <div><strong>PDF Rayco Wylie Professionnel :</strong> Mise en page haute qualité, logo officiel, ventilation complète des temps et tableau des pièces.</div>
+          </div>
+        </div>
+        <div class="cards-panel">
+          <div class="feature-card">
+            <div class="card-title">📁 Archivage Automatique <span class="badge-pill pill-blue">Auto</span></div>
+            <div class="card-desc">Sauvegarde dans Documents/RaycoWylie_Documents et stockage cloud prêt pour envoi courriel immédiat.</div>
+          </div>
+          <div class="feature-card">
+            <div class="card-title">⏱️ Arrondi Facturable <span class="badge-pill pill-green">Règle</span></div>
+            <div class="card-desc">Calcul intelligent au quart d'heure supérieur avec estimation symétrique du trajet retour.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diapositive 8 : Feuilles de Temps & Sécurité NIP -->
+    <div class="slide">
+      <div class="slide-header">
+        <div class="slide-category">RH &amp; Gestion de Paie</div>
+        <h2 class="slide-title">Feuilles de Temps Sécurisées par Code NIP</h2>
+      </div>
+      <div class="slide-body">
+        <div class="points-list">
+          <div class="point-item">
+            <div class="point-icon">🔒</div>
+            <div><strong>Code NIP à 4 Chiffres Strict :</strong> Chaque technicien possède son NIP unique pour consulter et modifier ses heures en toute confidentialité.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">📊</div>
+            <div><strong>Ventilation en 4 Catégories :</strong> Déplacement, Travail sur chantier, Attente facturable et déduction systématique des pauses repas.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">⚡</div>
+            <div><strong>« Clock-In / Clock-Out » &amp; Présence :</strong> Horodateur de quart de travail avec totalisation automatique des heures régulières et supplémentaires.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">⭐</div>
+            <div><strong>Fonction « Estimer Vendredi » :</strong> Permet d'anticiper le dernier vendredi de la période pour déposer la feuille de paie sans blocage administratif.</div>
+          </div>
+        </div>
+        <div class="cards-panel">
+          <div class="feature-card">
+            <div class="card-title">🛡️ Verrouillage Anti-Fraude <span class="badge-pill pill-red">Sécurité</span></div>
+            <div class="card-desc">Reverrouillage automatique dès qu'un utilisateur change de technicien ou quitte la vue.</div>
+          </div>
+          <div class="feature-card">
+            <div class="card-title">📋 Export Paie Impeccable <span class="badge-pill pill-green">PDF</span></div>
+            <div class="card-desc">Relevé bimensuel prêt pour la comptabilité avec ventilation complète de chaque journée.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diapositive 9 : Dépenses & Scanner IA -->
+    <div class="slide">
+      <div class="slide-header">
+        <div class="slide-category">Comptabilité Mobile</div>
+        <h2 class="slide-title">Comptes de Dépenses &amp; Scanner IA de Factures</h2>
+      </div>
+      <div class="slide-body">
+        <div class="points-list">
+          <div class="point-item">
+            <div class="point-icon">🤖</div>
+            <div><strong>Scanner IA Intelligent (OCR) :</strong> Prenez en photo un reçu (restaurant, essence, quincaillerie), l'IA extrait instantanément les données.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">🧾</div>
+            <div><strong>Détection Fiscale Canadienne :</strong> Extraction du marchand, de la date, du sous-total et calcul automatique TPS/TVQ.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">💡</div>
+            <div><strong>Ventilation des Pourboires :</strong> Séparation automatique du pourboire de restaurant selon les normes comptables strictes de l'entreprise.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">🔒</div>
+            <div><strong>Protection par NIP :</strong> Accès exclusif au compte de dépenses de chaque technicien pour garantir la confidentialité financière.</div>
+          </div>
+        </div>
+        <div class="cards-panel">
+          <div class="feature-card">
+            <div class="card-title">📸 Zéro Reçu Perdu <span class="badge-pill pill-green">Clarté</span></div>
+            <div class="card-desc">L'image haute définition du reçu est stockée et attachée directement à la ligne comptable.</div>
+          </div>
+          <div class="feature-card">
+            <div class="card-title">📑 Catégorisation Nette <span class="badge-pill pill-blue">Gestion</span></div>
+            <div class="card-desc">Carburant, Repas, Hôtel, Outillage, Stationnement avec statuts Approuvé / Payé.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diapositive 10 : Inventaire Mobile des Camions -->
+    <div class="slide">
+      <div class="slide-header">
+        <div class="slide-category">Logistique &amp; Matériel</div>
+        <h2 class="slide-title">Inventaire des Camions &amp; Déstockage Automatique</h2>
+      </div>
+      <div class="slide-body">
+        <div class="points-list">
+          <div class="point-item">
+            <div class="point-icon">🚚</div>
+            <div><strong>Inventaire Individualisé par Camion :</strong> Suivi précis pour Camion #101 (David Hestin), #102 (P-O Patry) et #103 (J-F Allie).</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">📦</div>
+            <div><strong>Catalogue Officiel Rayco Wylie :</strong> Références officielles (11BFL..., capteurs, afficheurs, solénoïdes, boîtiers de jonction).</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">📉</div>
+            <div><strong>Déduction Automatique au Rapport :</strong> Déstockage automatique des pièces utilisées dès que le rapport d'intervention est validé.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">🔍</div>
+            <div><strong>Recherche Multicritères &amp; Alertes :</strong> Filtre par camion, disponibilité immédiate et badges d'alerte pour commander à temps.</div>
+          </div>
+        </div>
+        <div class="cards-panel">
+          <div class="feature-card">
+            <div class="card-title">🔄 Cohérence Stock <span class="badge-pill pill-green">Direct</span></div>
+            <div class="card-desc">Fin des décalages d'inventaire entre le magasin de pièces central et le stock embarqué dans les camions.</div>
+          </div>
+          <div class="feature-card">
+            <div class="card-title">👥 Emprunt Inter-Camions <span class="badge-pill pill-amber">Flexible</span></div>
+            <div class="card-desc">Possibilité d'enregistrer une pièce issue d'un autre camion avec traçabilité complète.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diapositive 11 : Rendez-vous & Calendrier -->
+    <div class="slide">
+      <div class="slide-header">
+        <div class="slide-category">Planification &amp; Agenda</div>
+        <h2 class="slide-title">Rendez-vous &amp; Synchronisation Outlook / Google</h2>
+      </div>
+      <div class="slide-body">
+        <div class="points-list">
+          <div class="point-item">
+            <div class="point-icon">📅</div>
+            <div><strong>Planning Centralisé :</strong> Planification précise avec date, heure d'arrivée prévisionnelle, durée estimée et assignation technicien.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">📧</div>
+            <div><strong>Fichiers d'Invitation .ICS :</strong> Génération en un clic d'invitations calendrier compatibles avec Outlook, Microsoft 365 et Apple Calendar.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">🌐</div>
+            <div><strong>Intégration Google Agenda :</strong> Ajout direct dans l'agenda mobile du technicien sans aucune double saisie manuelle.</div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">👥</div>
+            <div><strong>Réassignation &amp; Vue Flotte :</strong> Visibilité claire de la charge de chaque technicien pour réaffecter les urgences instantanément.</div>
+          </div>
+        </div>
+        <div class="cards-panel">
+          <div class="feature-card">
+            <div class="card-title">🚨 Convocations Immédiates <span class="badge-pill pill-blue">Pro</span></div>
+            <div class="card-desc">Toutes les informations utiles (contact, grue, diagnostic préalable) transmises dans le corps de l'événement.</div>
+          </div>
+          <div class="feature-card">
+            <div class="card-title">🔄 Vue Synchronisée <span class="badge-pill pill-green">Temps Réel</span></div>
+            <div class="card-desc">Le technicien voit son agenda se mettre à jour directement sur son application mobile.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diapositive 12 : Conclusion & Valeur Ajoutée -->
+    <div class="slide slide-cover">
+      <span class="cover-badge">LE STANDARD D'EXCELLENCE RAYCO WYLIE</span>
+      <h2 class="cover-title">Prêt pour le Terrain</h2>
+      <p class="cover-subtitle">
+        RaycoFieldService unifie l'ensemble des opérations de service dans un système robuste, moderne et parfaitement connecté. Moins d'administration, plus de productivité et une traçabilité irréprochable.
+      </p>
+      <div class="cover-meta" style="margin-top: 24px;">
+        <div class="meta-tag" style="background: rgba(52, 211, 153, 0.15); border-color: rgba(52, 211, 153, 0.3); color: #34d399;">
+          ⏱️ <strong>+20%</strong> de productivité par technicien
+        </div>
+        <div class="meta-tag" style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.3); color: #38bdf8;">
+          🎯 <strong>100%</strong> de rapports signés et numérotés AAMMJJHHNN
+        </div>
+        <div class="meta-tag" style="background: rgba(209, 0, 31, 0.15); border-color: rgba(209, 0, 31, 0.3); color: #ff526d;">
+          🔒 <strong>100%</strong> sécurisé par NIP individuel
+        </div>
+      </div>
+      <div style="margin-top: 36px; display: flex; gap: 16px; justify-content: center;">
+        <a href="RaycoFieldService_Presentation.pptx" download class="btn btn-secondary" style="padding: 12px 24px; font-size: 14px;">
+          📥 Télécharger la Présentation (.PPTX)
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div class="counter" id="slideCounter">Diapositive 1 sur 12</div>
+    <div class="nav-controls">
+      <span class="keyboard-hint">Naviguer avec <kbd>←</kbd> <kbd>→</kbd> ou <kbd>Espace</kbd></span>
+      <button class="btn btn-secondary" id="btnPrev" onclick="prevSlide()">◀ Précédent</button>
+      <button class="btn btn-primary" id="btnNext" onclick="nextSlide()">Suivant ▶</button>
+    </div>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const progressBar = document.getElementById('progressBar');
+    const slideCounter = document.getElementById('slideCounter');
+    const btnPrev = document.getElementById('btnPrev');
+    const btnNext = document.getElementById('btnNext');
+
+    function updateSlide(index) {
+      if (index < 0) index = 0;
+      if (index >= totalSlides) index = totalSlides - 1;
+      currentSlide = index;
+
+      slides.forEach((s, i) => {
+        s.classList.toggle('active', i === currentSlide);
+      });
+
+      const progress = ((currentSlide + 1) / totalSlides) * 100;
+      progressBar.style.width = progress + '%';
+      slideCounter.textContent = `Diapositive ${currentSlide + 1} sur ${totalSlides}`;
+
+      btnPrev.disabled = (currentSlide === 0);
+      btnNext.textContent = (currentSlide === totalSlides - 1) ? 'Terminer 🏁' : 'Suivant ▶';
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides - 1) {
+        updateSlide(currentSlide + 1);
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        updateSlide(currentSlide - 1);
+      }
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+      }
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        e.preventDefault();
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        e.preventDefault();
+        prevSlide();
+      } else if (e.key === 'Home') {
+        updateSlide(0);
+      } else if (e.key === 'End') {
+        updateSlide(totalSlides - 1);
+      } else if (e.key === 'f' || e.key === 'F') {
+        toggleFullscreen();
+      }
+    });
+
+    updateSlide(0);
+  </script>
+</body>
+</html>

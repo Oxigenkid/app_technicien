@@ -1,0 +1,2493 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaycoWylie — Billets de Service Téléphonique</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/RaycoWylie-Logo.svg">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Supabase JS Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        :root {
+            --rw-red: #D1001F;
+            --rw-red-dark: #8B0000;
+            --rw-red-darker: #5A000A;
+            --rw-red-glow: rgba(209, 0, 31, 0.25);
+            --bg-dark: #0F1115;
+            --bg-card: #161922;
+            --bg-card-hover: #1E222D;
+            --bg-input: #0D0F14;
+            --border-subtle: #242938;
+            --border-highlight: #3B4254;
+            --text-main: #F3F4F6;
+            --text-muted: #9CA3AF;
+            --text-dim: #6B7280;
+            --accent-green: #10B981;
+            --accent-green-bg: rgba(16, 185, 129, 0.12);
+            --accent-amber: #F59E0B;
+            --accent-amber-bg: rgba(245, 158, 11, 0.12);
+            --accent-blue: #3B82F6;
+            --accent-blue-bg: rgba(59, 130, 246, 0.12);
+            --accent-purple: #8B5CF6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* HEADER (FIXE & SANS AUCUN SCINTILLEMENT) */
+        header {
+            background: linear-gradient(135deg, var(--rw-red-darker) 0%, var(--rw-red-dark) 40%, var(--rw-red) 100%);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            contain: layout style;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            min-height: 40px;
+            contain: layout style;
+            transform: translateZ(0);
+        }
+
+        .header-logo-capsule {
+            background: #FFFFFF;
+            padding: 6px 14px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 170px;
+            height: 38px;
+            flex-shrink: 0;
+            contain: strict;
+        }
+
+        .header-logo-capsule svg,
+        .header-logo-capsule img {
+            width: 142px;
+            height: 24px;
+            display: block;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .header-titles {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            contain: layout style;
+        }
+
+        .header-titles h1 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .header-badge {
+            background: #FFD54F;
+            color: #1A1A1A;
+            font-size: 0.65rem;
+            font-weight: 900;
+            padding: 2px 6px;
+            border-radius: 4px;
+            letter-spacing: 0.8px;
+        }
+
+        .header-titles p {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .btn-white {
+            background: #FFFFFF;
+            color: var(--rw-red-dark);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
+        .btn-white:hover {
+            background: #F3F4F6;
+            transform: translateY(-1px);
+        }
+
+        .btn-red {
+            background: var(--rw-red);
+            color: #FFFFFF;
+        }
+
+        .btn-red:hover {
+            background: #E60022;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px var(--rw-red-glow);
+        }
+
+        .btn-ghost {
+            background: rgba(255, 255, 255, 0.12);
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-ghost:hover {
+            background: rgba(255, 255, 255, 0.22);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-highlight);
+        }
+
+        .btn-outline:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--text-muted);
+        }
+
+        .btn-call-start {
+            background: #10B981;
+            color: #FFFFFF;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.35);
+        }
+
+        .btn-call-start:hover {
+            background: #059669;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.45);
+        }
+
+        .btn-call-stop {
+            background: #D1001F;
+            color: #FFFFFF;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(209, 0, 31, 0.35);
+        }
+
+        .btn-call-stop:hover {
+            background: #B7001B;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(209, 0, 31, 0.45);
+        }
+
+        .btn-call-resume {
+            background: #3B82F6;
+            color: #FFFFFF;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.35);
+        }
+
+        .btn-call-resume:hover {
+            background: #2563EB;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(59, 130, 246, 0.45);
+        }
+
+        .btn-call-encours {
+            background: #F59E0B;
+            color: #111319;
+            font-weight: 800;
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+        }
+
+        .btn-call-encours:hover {
+            background: #D97706;
+            color: #FFFFFF;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.45);
+        }
+
+        .call-active-pulse {
+            animation: callGlow 1.8s infinite;
+        }
+
+        @keyframes callGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            50% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+        }
+
+        /* 4 PHASES STEPPER BAR */
+        .stepper-bar {
+            background: #111319;
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 10px 24px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .step-pill {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 14px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .step-pill.active {
+            background: rgba(209, 0, 31, 0.08);
+            border-color: rgba(209, 0, 31, 0.4);
+        }
+
+        .step-num {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 800;
+            background: var(--border-highlight);
+            color: #FFFFFF;
+        }
+
+        .step-pill.active .step-num {
+            background: var(--rw-red);
+        }
+
+        .step-info .step-name {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+
+        .step-info .step-sub {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+        }
+
+        /* MAIN CONTENT LAYOUT */
+        .app-body {
+            display: grid;
+            grid-template-columns: 460px 1fr 340px;
+            flex: 1;
+            overflow: hidden;
+            height: calc(100vh - 120px);
+        }
+
+        @media (max-width: 1400px) {
+            .app-body {
+                grid-template-columns: 420px 1fr;
+            }
+            .sidebar-knowledge {
+                display: none;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .app-body {
+                grid-template-columns: 1fr;
+                height: auto;
+                overflow: visible;
+            }
+            .stepper-bar {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* PANELS */
+        .panel {
+            overflow-y: auto;
+            padding: 20px;
+            border-right: 1px solid var(--border-subtle);
+        }
+
+        .panel-form {
+            background: #14171F;
+        }
+
+        .panel-center {
+            background: #0E1015;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-knowledge {
+            background: #12141A;
+            border-right: none;
+            border-left: 1px solid var(--border-subtle);
+        }
+
+        /* SECTION CARDS */
+        .section-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: border-color 0.2s;
+        }
+
+        .section-card:hover {
+            border-color: var(--border-highlight);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .section-header-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-obligatoire {
+            background: rgba(209, 0, 31, 0.2);
+            color: #FF4D4D;
+            border: 1px solid rgba(209, 0, 31, 0.4);
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .badge-optionnel {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-dim);
+            font-size: 0.65rem;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* FORM ELEMENTS */
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        label {
+            display: block;
+            font-size: 0.74rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        label.required::after {
+            content: " *";
+            color: var(--rw-red);
+            font-weight: 900;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            background: var(--bg-input);
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 0.85rem;
+            color: var(--text-main);
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--rw-red);
+            box-shadow: 0 0 0 2px var(--rw-red-glow);
+        }
+
+        .input-obligatoire {
+            border-color: rgba(209, 0, 31, 0.4) !important;
+            background: rgba(209, 0, 31, 0.04) !important;
+        }
+
+        .input-with-action {
+            display: flex;
+            gap: 6px;
+        }
+
+        .input-with-action input {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            color: #FFD54F;
+        }
+
+        /* TROUBLE CATEGORIES GRID (FLOWCHART 6 BUTTONS) */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .cat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 12px 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .cat-card:hover {
+            border-color: var(--rw-red);
+            background: var(--bg-card-hover);
+            transform: translateY(-2px);
+        }
+
+        .cat-card.active {
+            border-color: var(--rw-red);
+            background: rgba(209, 0, 31, 0.12);
+            box-shadow: 0 0 12px var(--rw-red-glow);
+        }
+
+        .cat-card i {
+            color: var(--rw-red);
+        }
+
+        .cat-card.active i {
+            color: #FF4D4D;
+        }
+
+        .cat-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.2;
+        }
+
+        .cat-desc {
+            font-size: 0.68rem;
+            color: var(--text-dim);
+            line-height: 1.1;
+        }
+
+        /* GUIDED QUESTIONS ACCORDION */
+        .guided-box {
+            background: rgba(16, 185, 129, 0.04);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 16px;
+        }
+
+        .guided-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-green);
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .question-item {
+            margin-bottom: 10px;
+        }
+
+        .question-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+
+        /* AUTO SUGGESTIONS BOX (FLOWCHART PHASE 3) */
+        .suggestions-box {
+            background: rgba(59, 130, 246, 0.05);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 16px;
+        }
+
+        .suggestions-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--accent-blue);
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .solution-card {
+            background: #141824;
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px;
+            padding: 10px;
+            margin-bottom: 8px;
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .solution-card:hover {
+            border-color: var(--accent-blue);
+        }
+
+        .solution-card strong {
+            color: #FFFFFF;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        /* RESOLUTION / ESCALATION / EN COURS DECISION BLOCK (3 CHOIX) */
+        .decision-block {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .decision-choice {
+            padding: 14px 10px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .decision-yes {
+            background: rgba(16, 185, 129, 0.06);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        .decision-yes:hover, .decision-yes.selected {
+            background: rgba(16, 185, 129, 0.16);
+            border-color: var(--accent-green);
+            box-shadow: 0 0 16px rgba(16, 185, 129, 0.2);
+        }
+
+        .decision-encours-card {
+            background: rgba(245, 158, 11, 0.06);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        .decision-encours-card:hover, .decision-encours-card.selected {
+            background: rgba(245, 158, 11, 0.16);
+            border-color: #F59E0B;
+            box-shadow: 0 0 16px rgba(245, 158, 11, 0.25);
+        }
+
+        .decision-no {
+            background: rgba(209, 0, 31, 0.06);
+            border-color: rgba(209, 0, 31, 0.3);
+        }
+
+        .decision-no:hover, .decision-no.selected {
+            background: rgba(209, 0, 31, 0.16);
+            border-color: var(--rw-red);
+            box-shadow: 0 0 16px var(--rw-red-glow);
+        }
+
+        .decision-choice h4 {
+            font-size: 0.88rem;
+            font-weight: 800;
+        }
+
+        .decision-yes h4 { color: var(--accent-green); }
+        .decision-encours-card h4 { color: #F59E0B; }
+        .decision-no h4 { color: #FF4D4D; }
+
+        /* TICKETS TABLE & SEARCH */
+        .tickets-table-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 10px;
+            padding: 16px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .table-search-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .tickets-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+        }
+
+        .tickets-table th {
+            text-align: left;
+            padding: 8px 10px;
+            color: var(--text-dim);
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-subtle);
+            text-transform: uppercase;
+            font-size: 0.7rem;
+        }
+
+        .tickets-table td {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            color: var(--text-muted);
+        }
+
+        .tickets-table tr:hover td {
+            background: var(--bg-card-hover);
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        .status-resolu {
+            background: var(--accent-green-bg);
+            color: var(--accent-green);
+        }
+
+        .status-escalade {
+            background: rgba(209, 0, 31, 0.15);
+            color: #FF5252;
+        }
+
+        .status-encours {
+            background: var(--accent-amber-bg);
+            color: var(--accent-amber);
+        }
+
+        .status-archive {
+            background: rgba(107, 114, 128, 0.18);
+            color: #9CA3AF;
+        }
+
+        /* STATS PILLS */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .stat-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stat-val {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            line-height: 1;
+        }
+
+        .stat-lbl {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            margin-top: 4px;
+        }
+
+        /* MODAL TOAST */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #1F2430;
+            border: 1px solid var(--border-highlight);
+            color: #FFFFFF;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.85rem;
+            z-index: 1000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .toast.success { border-color: var(--accent-green); }
+        .toast.error { border-color: var(--rw-red); }
+
+        /* LIVE SYNC BADGE */
+        .live-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--accent-green);
+            background: rgba(16, 185, 129, 0.1);
+            padding: 4px 8px;
+            border-radius: 12px;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+        }
+
+        .live-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.85); }
+        }
+
+        .rotating {
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ─── HEADER RAYCOWYLIE (FIXE & SANS SCINTILLEMENT) ─── -->
+    <header>
+        <div class="header-brand">
+            <div class="header-logo-capsule" title="RaycoWylie Systems">
+                <svg width="215" height="37" viewBox="0 0 215 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.05777 4.26522L4.22332 1.10148C4.37533 0.949445 4.5558 0.828853 4.75443 0.746594C4.95306 0.664335 5.16595 0.622021 5.38094 0.622071H31.3715C31.5865 0.621941 31.7996 0.664216 31.9983 0.746478C32.197 0.828739 32.3776 0.949373 32.5297 1.10148L35.6946 4.26703C35.847 4.41882 35.968 4.59922 36.0504 4.79788C36.1329 4.99654 36.1753 5.20954 36.1752 5.42465V31.4158C36.1752 31.6309 36.1327 31.844 36.0503 32.0427C35.9678 32.2415 35.847 32.422 35.6946 32.574L32.5297 35.7389C32.3776 35.891 32.197 36.0117 31.9983 36.0939C31.7996 36.1762 31.5865 36.2185 31.3715 36.2183H14.4752L33.0818 3.06215L32.2703 2.26152C32.2703 2.26152 20.0808 20.8724 0.577149 31.2794V5.42343C0.577019 5.20834 0.619295 4.99534 0.701556 4.7966C0.783818 4.59786 0.904452 4.41729 1.05656 4.26522" fill="#D1001F"/>
+                    <path d="M137.66 29.8548L130.64 6.98438H136.743L140.646 19.4533L144.026 6.98438H149.047L152.427 19.4199L156.331 6.98438H162.433L155.38 29.8548H149.9L146.52 18.109L143.173 29.8548H137.66Z" fill="#D1001F"/>
+                    <path d="M173.621 13.3169L169.65 22.8966L165.81 13.3169H159.546L166.567 30.052L163.976 36.2194H170.176L179.954 13.3175L173.621 13.3169Z" fill="#D1001F"/>
+                    <path d="M186.942 6.98438H180.872V29.8536H186.942V6.98438Z" fill="#D1001F"/>
+                    <path d="M189.174 13.3175H195.245V29.8538H189.174V13.3175ZM189.829 11.6108C189.517 11.3047 189.27 10.9396 189.101 10.5367C188.932 10.1338 188.844 9.70126 188.844 9.26434C188.844 8.82742 188.932 8.39488 189.101 7.992C189.27 7.58911 189.517 7.22397 189.829 6.9179C190.139 6.60557 190.507 6.35765 190.912 6.18845C191.318 6.01925 191.753 5.93213 192.193 5.93213C192.632 5.93213 193.068 6.01925 193.473 6.18845C193.879 6.35765 194.247 6.60557 194.557 6.9179C194.868 7.22397 195.116 7.58911 195.285 7.992C195.454 8.39488 195.541 8.82742 195.541 9.26434C195.541 9.70126 195.454 10.1338 195.285 10.5367C195.116 10.9396 194.868 11.3047 194.557 11.6108C193.924 12.2273 193.076 12.5723 192.193 12.5723C191.31 12.5723 190.462 12.2273 189.829 11.6108Z" fill="#D1001F"/>
+                    <path d="M208.958 19.5514C208.958 18.5023 207.645 17.5835 206.072 17.5835C204.364 17.5835 202.955 18.469 202.855 19.5514H208.958ZM196.753 21.4872C196.705 20.3239 196.916 19.1645 197.37 18.0923C197.824 17.0201 198.51 16.0617 199.378 15.2858C201.225 13.6706 203.62 12.8247 206.072 12.9221C207.254 12.878 208.434 13.0734 209.539 13.4966C210.644 13.9198 211.653 14.562 212.503 15.3846C213.318 16.154 213.96 17.0863 214.39 18.1208C214.82 19.1552 215.027 20.2687 214.997 21.3885C214.999 22.0028 214.966 22.6167 214.899 23.2273H202.823C202.922 24.4079 204.364 25.1625 206.498 25.1625C207.8 25.2022 209.067 24.7445 210.043 23.8825L213.488 27.1626C212.542 28.1453 211.404 28.9232 210.145 29.4484C208.886 29.9735 207.533 30.2346 206.169 30.2154C203.347 30.2154 201.084 29.4275 199.345 27.8856C198.484 27.0989 197.805 26.1329 197.358 25.0557C196.91 23.9785 196.704 22.8163 196.754 21.6509L196.753 21.4872Z" fill="#D1001F"/>
+                    <path d="M49.792 17.7451H53.2709C53.6328 17.7797 53.9979 17.7339 54.34 17.6109C54.6822 17.488 54.9929 17.2909 55.25 17.0338C55.5071 16.7767 55.7042 16.466 55.8271 16.1238C55.9501 15.7817 55.9959 15.4166 55.9613 15.0547C55.9877 14.7511 55.9517 14.4454 55.8556 14.1562C55.7595 13.8671 55.6052 13.6007 55.4023 13.3733C55.1995 13.146 54.9522 12.9625 54.6758 12.8342C54.3995 12.7059 54.0998 12.6355 53.7952 12.6274H49.795L49.792 17.7451ZM43.5579 29.8546V6.98414H53.9588C55.0308 6.96201 56.0965 7.15368 57.0936 7.54797C58.0907 7.94226 58.9993 8.53126 59.7663 9.28058C60.5369 9.98795 61.149 10.8506 61.5621 11.8117C61.9751 12.7728 62.1798 13.8105 62.1627 14.8565C62.2057 16.2049 61.8605 17.5373 61.1683 18.6952C60.476 19.8531 59.4658 20.7878 58.2577 21.3882L63.9676 29.8546H56.8159L52.1551 22.7331H49.7914V29.8546H43.5579Z" fill="#1A1A1A"/>
+                    <path d="M72.3012 24.7356C73.1741 24.7673 74.0245 24.4547 74.669 23.8651C75.3134 23.2755 75.7003 22.4562 75.7462 21.5839C75.6687 20.7238 75.2723 19.9237 74.6348 19.341C73.9973 18.7584 73.1649 18.4353 72.3012 18.4353C71.4376 18.4353 70.6052 18.7584 69.9677 19.341C69.3302 19.9237 68.9337 20.7238 68.8563 21.5839C68.9023 22.4563 69.2893 23.2755 69.9339 23.8651C70.5784 24.4547 71.4283 24.7673 72.3012 24.7356ZM65.1804 15.6128C65.9173 14.8016 66.8204 14.1589 67.8283 13.7285C68.8362 13.2981 69.925 13.0901 71.0206 13.1188C73.417 13.1188 74.9262 13.7764 75.5813 15.0546V13.317H81.5209V29.8533H75.5813V28.1138C74.9262 29.3939 73.417 30.0491 71.0206 30.0491C69.9284 30.0767 68.8429 29.8717 67.836 29.4478C66.8291 29.0239 65.9239 28.3907 65.1804 27.5902C63.6427 25.9736 62.8054 23.8152 62.8506 21.5845C62.8117 19.3652 63.6487 17.2193 65.1804 15.6128Z" fill="#1A1A1A"/>
+                    <path d="M96.3499 13.3169L92.3807 22.8966L88.5412 13.3169H82.2731L89.2945 30.052L86.7053 36.2194H92.9049L102.684 13.3169H96.3499Z" fill="#1A1A1A"/>
+                    <path d="M118.07 16.1392L114.199 19.849C113.781 19.3838 113.27 19.0118 112.7 18.7574C112.129 18.503 111.51 18.3719 110.885 18.3726C110.46 18.3539 110.035 18.4216 109.636 18.5716C109.238 18.7215 108.874 18.9507 108.566 19.2452C108.258 19.5397 108.013 19.8934 107.846 20.2851C107.679 20.6768 107.592 21.0983 107.592 21.5242C107.592 21.9501 107.679 22.3716 107.846 22.7633C108.013 23.155 108.258 23.5087 108.566 23.8032C108.874 24.0977 109.238 24.3268 109.636 24.4768C110.035 24.6268 110.46 24.6945 110.885 24.6758C111.51 24.6765 112.129 24.5453 112.7 24.2908C113.271 24.0363 113.781 23.6642 114.199 23.1988L118.07 26.9068C117.227 27.8811 116.197 28.6771 115.042 29.2484C113.886 29.8197 112.629 30.1546 111.342 30.2337C110.056 30.3127 108.766 30.1342 107.55 29.7086C106.333 29.283 105.214 28.619 104.257 27.7553C103.385 26.9719 102.693 26.0091 102.229 24.9329C101.764 23.8568 101.538 22.6929 101.566 21.5212C101.539 20.3495 101.765 19.1857 102.23 18.1097C102.694 17.0337 103.386 16.0708 104.257 15.287C105.214 14.4233 106.334 13.7593 107.55 13.334C108.767 12.9086 110.057 12.7305 111.343 12.8099C112.63 12.8894 113.887 13.2249 115.043 13.7968C116.198 14.3687 117.227 15.1655 118.07 16.1404" fill="#1A1A1A"/>
+                    <path d="M129.623 23.7272C129.942 23.4429 130.198 23.0941 130.373 22.7038C130.548 22.3136 130.639 21.8906 130.639 21.4629C130.639 21.0351 130.548 20.6121 130.373 20.2219C130.198 19.8316 129.942 19.4829 129.623 19.1985C128.977 18.5845 128.118 18.2438 127.227 18.2476C126.352 18.2313 125.504 18.5583 124.867 19.1586C124.229 19.7589 123.852 20.5848 123.815 21.4598C123.851 22.3356 124.228 23.1626 124.865 23.7638C125.503 24.365 126.351 24.6925 127.227 24.6763C128.118 24.6801 128.977 24.3394 129.623 23.7254M133.857 15.2948C134.732 16.0654 135.43 17.0148 135.906 18.0789C136.382 19.1429 136.623 20.2968 136.614 21.4623C136.621 22.6323 136.378 23.7904 135.903 24.8596C135.428 25.9288 134.73 26.8846 133.857 27.6637C132.036 29.312 129.668 30.2249 127.212 30.2249C124.756 30.2249 122.388 29.312 120.567 27.6637C119.704 26.8781 119.016 25.9202 118.547 24.852C118.078 23.7837 117.839 22.6289 117.845 21.4623C117.837 20.3002 118.075 19.1496 118.544 18.0865C119.014 17.0234 119.703 16.0719 120.567 15.2948C122.378 13.627 124.75 12.7012 127.212 12.7012C129.674 12.7012 132.046 13.627 133.857 15.2948Z" fill="#1A1A1A"/>
+                </svg>
+            </div>
+            <div class="header-titles">
+                <h1>
+                    <span>Service Téléphonique</span>
+                    <span class="header-badge" id="headerRefBadge">BILLET TF-XXXXX</span>
+                </h1>
+                <p>Support technique d'urgence • Systèmes de contrôle & sécurité pour grues</p>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <div class="live-badge" id="liveSyncStatus">
+                <span class="live-dot"></span>
+                <span>Temps Réel Actif</span>
+            </div>
+            <button class="btn btn-call-start" id="btnHeaderDemarrerAppel" onclick="demarrerNouvelAppel()" title="Démarrer l'appel et lancer le chronomètre">
+                <i data-lucide="phone-call" style="width: 16px; height: 16px;"></i>
+                Démarrer
+            </button>
+            <button class="btn btn-call-encours" id="btnHeaderEnCours" onclick="mettreBilletEnCoursNonTermine()" title="Enregistrer l'appel comme En cours - Non terminé">
+                <i data-lucide="clock" style="width: 16px; height: 16px;"></i>
+                En cours
+            </button>
+            <button class="btn btn-call-stop" id="btnHeaderTerminerAppel" onclick="terminerEtEnregistrerBillet()" title="Terminer l'appel, arrêter le chrono et enregistrer le billet">
+                <i data-lucide="phone-off" style="width: 16px; height: 16px;"></i>
+                Terminer & Clôturer
+            </button>
+            <button class="btn btn-ghost" onclick="reinitialiserFormulaire()" title="Nouveau billet vierge">
+                <i data-lucide="plus-circle" style="width: 16px; height: 16px;"></i>
+                Nouveau
+            </button>
+        </div>
+    </header>
+
+    <!-- ─── 4 PHASES STEPPER BAR (FLOWCHART RAYCOWYLIE) ─── -->
+    <div class="stepper-bar">
+        <div class="step-pill active" id="stepPill1">
+            <div class="step-num">1</div>
+            <div class="step-info">
+                <div class="step-name">PHASE 1 : CAPTURE</div>
+                <div class="step-sub">Contact (Nom & Tél obligatoires), machine, TF-XXXXX</div>
+            </div>
+        </div>
+        <div class="step-pill" id="stepPill2">
+            <div class="step-num">2</div>
+            <div class="step-info">
+                <div class="step-name">PHASE 2 : DIAGNOSTIC</div>
+                <div class="step-sub">Catégorisation trouble & questions guidées</div>
+            </div>
+        </div>
+        <div class="step-pill" id="stepPill3">
+            <div class="step-num">3</div>
+            <div class="step-info">
+                <div class="step-name">PHASE 3 : RÉSOLUTION</div>
+                <div class="step-sub">Suggestions auto, résolution ou escalade</div>
+            </div>
+        </div>
+        <div class="step-pill" id="stepPill4">
+            <div class="step-num">4</div>
+            <div class="step-info">
+                <div class="step-name">PHASE 4 : CAPITALISATION</div>
+                <div class="step-sub">Enregistrement, historique & statistiques</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── APP BODY (3 COLONNES) ─── -->
+    <div class="app-body">
+
+        <!-- COLONNE 1 : FICHE CAPTURE & IDENTIFICATION (PHASE 1) -->
+        <div class="panel panel-form">
+
+            <!-- BANNIÈRE APPEL ENTRANT AVEC CONTRÔLE D'APPEL COMPLET (DÉMARRER / REPRENDRE / TERMINER) -->
+            <div style="background: rgba(255, 213, 79, 0.08); border: 1px solid rgba(255, 213, 79, 0.3); border-radius: 8px; padding: 12px 14px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 10px;" id="cadreBanniereAppel">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <span id="indicateurAppelPoint" style="width: 10px; height: 10px; border-radius: 50%; background: #9CA3AF; display: inline-block;"></span>
+                        <div>
+                            <span id="titreEtatAppel" style="font-size: 0.8rem; font-weight: 800; color: #FFD54F; display: block; line-height: 1.1; letter-spacing: 0.3px;">COMMUNICATION TÉLÉPHONIQUE</span>
+                            <span id="sousTitreEtatAppel" style="font-size: 0.68rem; color: var(--text-dim);">Prêt à démarrer un appel ou reprendre un billet</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <span id="horlogeAppel" style="font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; font-weight: 800; color: #FFD54F; background: #000; padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(255, 213, 79, 0.4); letter-spacing: 1px;">00:00:00</span>
+                    </div>
+                </div>
+
+                <!-- BOUTONS D'ACTION D'APPEL DIRECTS -->
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                    <button type="button" class="btn btn-call-start" id="btnDemarrerAppel" onclick="demarrerNouvelAppel()" style="flex: 1; padding: 7px 12px; font-size: 0.8rem; justify-content: center;" title="Démarrer un nouvel appel et lancer le compteur">
+                        <i data-lucide="phone-call" style="width: 14px; height: 14px;"></i>
+                        <span id="lblBtnDemarrer">📞 Démarrer l'appel</span>
+                    </button>
+
+                    <button type="button" class="btn btn-call-resume" id="btnReprendreAppel" onclick="reprendreAppelExistant()" style="display: none; padding: 7px 12px; font-size: 0.8rem; justify-content: center;" title="Le client rappelle : reprendre ce même billet et continuer le chronomètre">
+                        <i data-lucide="play" style="width: 14px; height: 14px;"></i>
+                        <span>▶️ Reprendre cet appel</span>
+                    </button>
+
+                    <button type="button" class="btn btn-call-encours" id="btnEnCoursAppel" onclick="mettreBilletEnCoursNonTermine()" style="flex: 1; padding: 7px 12px; font-size: 0.8rem; justify-content: center;" title="Mettre le billet au statut EN COURS - NON TERMINÉ et conserver la durée d'appel">
+                        <i data-lucide="clock" style="width: 14px; height: 14px;"></i>
+                        <span>⏳ En cours - Non terminé</span>
+                    </button>
+
+                    <button type="button" class="btn btn-call-stop" id="btnTerminerAppel" onclick="terminerEtEnregistrerBillet()" style="flex: 1; padding: 7px 12px; font-size: 0.8rem; justify-content: center;" title="Terminer l'appel, arrêter le chronomètre et enregistrer le billet">
+                        <i data-lucide="phone-off" style="width: 14px; height: 14px;"></i>
+                        <span>💾 Terminer & Clôturer</span>
+                    </button>
+
+                    <div style="display: flex; gap: 4px;">
+                        <button type="button" class="btn btn-outline" style="padding: 6px 8px; font-size: 0.72rem;" onclick="basculerPauseChronoAppel()" id="btnPauseChrono" title="Mettre en pause ou reprendre le chronomètre">
+                            <i data-lucide="pause" id="iconPauseChrono" style="width: 13px; height: 13px;"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline" style="padding: 6px 8px; font-size: 0.72rem;" onclick="reinitialiserChronoAppel()" title="Remettre le compteur d'appel à zéro">
+                            <i data-lucide="rotate-ccw" style="width: 13px; height: 13px;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FICHE CONTACT (SEULES OBLIGATIONS : NOM & TÉLÉPHONE) -->
+            <div class="section-card">
+                <div class="section-header">
+                    <div class="section-header-title">
+                        <i data-lucide="user-check" style="width: 16px; height: 16px; color: var(--rw-red);"></i>
+                        <span>Fiche Contact Client</span>
+                    </div>
+                    <span class="badge-obligatoire">2 Champs requis</span>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nomClient" class="required">Nom du client / Contact</label>
+                        <input type="text" id="nomClient" class="input-obligatoire" placeholder="Ex: Jean Tremblay" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="telephoneClient" class="required">Nº Téléphone</label>
+                        <input type="tel" id="telephoneClient" class="input-obligatoire" placeholder="Ex: (418) 650-2020" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="entrepriseClient">Entreprise</label>
+                        <input type="text" id="entrepriseClient" placeholder="Ex: Levage & Grues du Québec">
+                    </div>
+                    <div class="form-group">
+                        <label for="courrielClient">Courriel</label>
+                        <input type="email" id="courrielClient" placeholder="Ex: contact@grue.ca">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="paysRegion">Région / Fuseau horaire</label>
+                        <input type="text" id="paysRegion" placeholder="Ex: Québec (EST / UTC-5)">
+                    </div>
+                    <div class="form-group">
+                        <label for="typeClient">Type de compte</label>
+                        <select id="typeClient">
+                            <option value="Client final">Client final (Opérateur / Propriétaire)</option>
+                            <option value="Distributeur">Distributeur agréé</option>
+                            <option value="OEM / Manufacturier">OEM / Manufacturier de grue</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RÉFÉRENCE TF-XXXXX -->
+            <div class="section-card">
+                <div class="section-header">
+                    <div class="section-header-title">
+                        <i data-lucide="bookmark" style="width: 16px; height: 16px; color: #FFD54F;"></i>
+                        <span>Référence TF-XXXXX</span>
+                    </div>
+                    <span class="badge-optionnel">Dossier / Historique</span>
+                </div>
+                <div class="form-group">
+                    <div class="input-with-action">
+                        <input type="text" id="referenceTF" placeholder="TF-XXXXX">
+                        <button type="button" class="btn btn-outline" onclick="rechercherHistoriqueTF()" title="Recherche automatique de l'historique">
+                            <i data-lucide="search" style="width: 14px; height: 14px;"></i>
+                            Historique
+                        </button>
+                    </div>
+                    <div id="historiqueResultat" style="font-size: 0.72rem; color: var(--text-dim); margin-top: 6px;"></div>
+                </div>
+            </div>
+
+            <!-- IDENTIFICATION MACHINE (OPTIONNELLE) -->
+            <div class="section-card">
+                <div class="section-header">
+                    <div class="section-header-title">
+                        <i data-lucide="truck" style="width: 16px; height: 16px; color: var(--text-muted);"></i>
+                        <span>Identification Machine</span>
+                    </div>
+                    <span class="badge-optionnel">Facultatif</span>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="typeGrue">Type de grue</label>
+                        <select id="typeGrue">
+                            <option value="">Sélectionner un type...</option>
+                            <option value="Boom truck">Boom truck</option>
+                            <option value="Grue Mobile / Tout-terrain">Grue Mobile / Tout-terrain</option>
+                            <option value="Grue à tour">Grue à tour</option>
+                            <option value="Grue sur chenilles">Grue sur chenilles</option>
+                            <option value="Portique / Pont roulant">Portique / Pont roulant</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="marqueGrue">Marque & Modèle</label>
+                        <input type="text" id="marqueGrue" placeholder="Ex: Tadano GR-700XL">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="numSerieMachine">Nº de Série machine</label>
+                        <input type="text" id="numSerieMachine" placeholder="Ex: TD-847291">
+                    </div>
+                    <div class="form-group">
+                        <label for="anneeHeures">Année / Heures</label>
+                        <input type="text" id="anneeHeures" placeholder="Ex: 2021 • 3,420 hrs">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="siteChantier">Site / Chantier actuel</label>
+                    <input type="text" id="siteChantier" placeholder="Ex: Pont Champlain, Chantier Nord">
+                </div>
+            </div>
+
+            <!-- SYSTÈME RAYCOWYLIE INSTALLÉ -->
+            <div class="section-card">
+                <div class="section-header">
+                    <div class="section-header-title">
+                        <i data-lucide="cpu" style="width: 16px; height: 16px; color: var(--rw-red);"></i>
+                        <span>Système RaycoWylie</span>
+                    </div>
+                    <span class="badge-optionnel">Produit</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="systemeInstalle">Système principal</label>
+                    <select id="systemeInstalle" onchange="actualiserQuestionsSelonProduit()">
+                        <option value="i4500">i4500 / i4507 / i4508 / i4510 (Indicateur de capacité)</option>
+                        <option value="i4000">i4000 (RCI Multipurpose)</option>
+                        <option value="i4300">i4300 (Compact RCI)</option>
+                        <option value="i5000">i5000 (Écran tactile nouvelle génération)</option>
+                        <option value="ATB Filaire/Sans-fil">Anti-2-Block (ATB filaire ou sans fil R160)</option>
+                        <option value="Anémomètre">Anémomètre de vent (R180 sans fil / filaire)</option>
+                        <option value="Rayconnect">Rayconnect / Télématique IoT</option>
+                        <option value="Caméras & Vision">Système Caméras & Moniteur treuil</option>
+                        <option value="Autre / Pièces">Autre équipement ou pièces détachées</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="accessoiresSysteme">Capteurs & Accessoires connectés</label>
+                    <input type="text" id="accessoiresSysteme" placeholder="Ex: Transducteur de pression, capteur d'angle flèche...">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- COLONNE 2 : DIAGNOSTIC GUIDÉ & SUGGESTIONS AUTO (PHASES 2 & 3) -->
+        <div class="panel panel-center">
+
+            <!-- STATS RAPIDES EN TÊTE DU WORKFLOW -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: rgba(209,0,31,0.15); color: var(--rw-red);">
+                        <i data-lucide="ticket"></i>
+                    </div>
+                    <div>
+                        <div class="stat-val" id="statTotalBillets">0</div>
+                        <div class="stat-lbl">Billets aujourd'hui</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: var(--accent-green-bg); color: var(--accent-green);">
+                        <i data-lucide="check-circle-2"></i>
+                    </div>
+                    <div>
+                        <div class="stat-val" id="statTauxResolution">100%</div>
+                        <div class="stat-lbl">1er appel résolu</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: var(--accent-amber-bg); color: var(--accent-amber);">
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <div>
+                        <div class="stat-val" id="statEnCours">0</div>
+                        <div class="stat-lbl">Billets en cours</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: rgba(209,0,31,0.15); color: #FF4D4D;">
+                        <i data-lucide="alert-triangle"></i>
+                    </div>
+                    <div>
+                        <div class="stat-val" id="statEscalade">0</div>
+                        <div class="stat-lbl">Escalades en suivi</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHASE 2 : CATÉGORIE DU TROUBLE (LES 6 DU FLOWCHART) -->
+            <div class="section-card">
+                <div class="section-header">
+                    <div class="section-header-title">
+                        <i data-lucide="alert-octagon" style="width: 16px; height: 16px; color: #F59E0B;"></i>
+                        <span>Phase 2 : Catégorie du trouble signalé</span>
+                    </div>
+                    <span style="font-size: 0.72rem; color: var(--text-dim);">Cliquez pour adapter le questionnaire</span>
+                </div>
+
+                <div class="category-grid">
+                    <div class="cat-card active" onclick="selectionnerCategorie('Écran / Alimentation', this)">
+                        <i data-lucide="monitor-x" style="width: 22px; height: 22px;"></i>
+                        <div class="cat-title">ÉCRAN / ALIM.</div>
+                        <div class="cat-desc">Noir, gel, erreur au démarrage</div>
+                    </div>
+                    <div class="cat-card" onclick="selectionnerCategorie('Alarme de surcharge', this)">
+                        <i data-lucide="bell-off" style="width: 22px; height: 22px;"></i>
+                        <div class="cat-title">ALARME SURCHARGE</div>
+                        <div class="cat-desc">Fausse alarme, dérive zéro, calibration</div>
+                    </div>
+                    <div class="cat-card" onclick="selectionnerCategorie('Anti-2-Block (ATB)', this)">
+                        <i data-lucide="shield-alert" style="width: 22px; height: 22px;"></i>
+                        <div class="cat-title">ANTI-2-BLOCK (ATB)</div>
+                        <div class="cat-desc">Alarme intempestive, sans fil perdu</div>
+                    </div>
+                    <div class="cat-card" onclick="selectionnerCategorie('Capteurs & Mesures', this)">
+                        <i data-lucide="compass" style="width: 22px; height: 22px;"></i>
+                        <div class="cat-title">CAPTEURS & MESURES</div>
+                        <div class="cat-desc">Charge, angle, longueur, vent</div>
+                    </div>
+                    <div class="cat-card" onclick="selectionnerCategorie('Caméra / Affichage', this)">
+                        <i data-lucide="video-off" style="width: 22px; height: 22px;"></i>
+                        <div class="cat-title">CAMÉRA / VISION</div>
+                        <div class="cat-desc">Pas d'image, écran noir, Rayconnect</div>
+                    </div>
+                    <div class="cat-card" onclick="selectionnerCategorie('Pièces / Commande', this)">
+                        <i data-lucide="package" style="width: 22px; height: 22px;"></i>
+                        <div class="cat-title">PIÈCES / COMMANDE</div>
+                        <div class="cat-desc">Délai, expédition, RMA, commande</div>
+                    </div>
+                </div>
+
+                <!-- DESCRIPTION LIBRE DU TROUBLE -->
+                <div class="form-group">
+                    <label for="descriptionTrouble">Description détaillée des symptômes</label>
+                    <textarea id="descriptionTrouble" rows="2" placeholder="Description formulée par le client lors de l'appel téléphonique..."></textarea>
+                </div>
+            </div>
+
+            <!-- SCRIPT DE QUESTIONS GUIDÉES DYNAMIQUES -->
+            <div class="guided-box">
+                <div class="guided-header">
+                    <i data-lucide="help-circle" style="width: 18px; height: 18px;"></i>
+                    <span id="guidedTitle">Questionnaire guidé — Écran / Alimentation</span>
+                </div>
+                <div id="guidedQuestionsContainer">
+                    <!-- Généré dynamiquement en Javascript -->
+                </div>
+            </div>
+
+            <!-- PHASE 3 : SUGGESTIONS AUTOMATIQUES DE SOLUTIONS -->
+            <div class="suggestions-box">
+                <div class="suggestions-header">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <i data-lucide="sparkles" style="width: 18px; height: 18px;"></i>
+                        <span>Suggestions automatiques de solutions (Base de connaissances RaycoWylie)</span>
+                    </div>
+                    <span style="font-size: 0.7rem; color: var(--text-dim);">Billets similaires TF-XXXXX</span>
+                </div>
+                <div id="suggestionsContainer">
+                    <!-- Suggestions injectées dynamiquement -->
+                </div>
+            </div>
+
+            <!-- PHASE 3 : DÉCISION RÉSOLU ? (OUI / NON DU FLOWCHART) -->
+            <div class="section-card">
+                <div class="section-header">
+                    <div class="section-header-title">
+                        <i data-lucide="help-circle" style="width: 16px; height: 16px; color: var(--accent-blue);"></i>
+                        <span>Décision technique : Résolu au téléphone ?</span>
+                    </div>
+                </div>
+
+                <div class="decision-block">
+                    <!-- 1. OUI : RÉSOLUTION CONFIRMÉE -->
+                    <div class="decision-choice decision-yes selected" id="choiceYes" onclick="choisirResolution('resolu')">
+                        <i data-lucide="check-circle" style="width: 24px; height: 24px; color: var(--accent-green);"></i>
+                        <h4>OUI — RÉSOLU</h4>
+                        <span style="font-size: 0.7rem; color: var(--text-muted);">Solution confirmée et clôturée</span>
+                    </div>
+
+                    <!-- 2. EN COURS : NON TERMINÉ (EN ATTENTE / RAPPEL) -->
+                    <div class="decision-choice decision-encours-card" id="choiceEnCours" onclick="choisirResolution('encours')">
+                        <i data-lucide="clock" style="width: 24px; height: 24px; color: #F59E0B;"></i>
+                        <h4>EN COURS</h4>
+                        <span style="font-size: 0.7rem; color: var(--text-muted);">Non terminé / Client doit rappeler</span>
+                    </div>
+
+                    <!-- 3. NON : ESCALADE -->
+                    <div class="decision-choice decision-no" id="choiceNo" onclick="choisirResolution('escalade')">
+                        <i data-lucide="arrow-up-right" style="width: 24px; height: 24px; color: #FF4D4D;"></i>
+                        <h4>ESCALADE</h4>
+                        <span style="font-size: 0.7rem; color: var(--text-muted);">Superviseur, RMA ou Chantier</span>
+                    </div>
+                </div>
+
+                <!-- DÉTAILS SI RÉSOLU -->
+                <div id="blocResolutionOui">
+                    <div class="form-group">
+                        <label for="solutionAppliquee">Solution appliquée / Procédure de clôture</label>
+                        <textarea id="solutionAppliquee" rows="2" placeholder="Ex: Réinitialisation du câble d'alimentation 24V et étalonnage du zéro effectué avec succès."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="piecesUtilisees">Pièce utilisée ou remplacée (si applicable)</label>
+                        <input type="text" id="piecesUtilisees" placeholder="Ex: Câble capteur longueur 15m (Réf #102-401)">
+                    </div>
+                </div>
+
+                <!-- DÉTAILS SI EN COURS - NON TERMINÉ -->
+                <div id="blocResolutionEnCours" style="display: none;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="motifEnCours">Statut de l'action en cours</label>
+                            <select id="motifEnCours">
+                                <option value="En attente de test opérateur">En attente de test de l'opérateur sur la grue</option>
+                                <option value="Client doit rappeler après vérification">Le client doit rappeler après vérification</option>
+                                <option value="En attente de tension/mesure">En attente de lecture multimètre/mesure électrique</option>
+                                <option value="Recherche de schéma électrique">Recherche de schéma / documentation en cours</option>
+                                <option value="Autre suivi requis">Autre action intermédiaire requise</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="prochaineActionEnCours">Prochaine étape / Note de suivi</label>
+                            <input type="text" id="prochaineActionEnCours" placeholder="Ex: Attente rappel de Jean après nettoyage du bornier">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DÉTAILS SI ESCALADE -->
+                <div id="blocResolutionNon" style="display: none;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="typeEscalade">Voie d'escalade</label>
+                            <select id="typeEscalade">
+                                <option value="1. Superviseur technique">1. Superviseur technique (Ingénierie)</option>
+                                <option value="2. Envoi de pièce (Stock / RMA)">2. Envoi de pièce d'urgence (Stock / RMA)</option>
+                                <option value="3. Rendez-vous technicien terrain">3. Rendez-vous technicien terrain en chantier</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="delaiPromis">Délai promis au client</label>
+                            <input type="text" id="delaiPromis" placeholder="Ex: Rappel avant 14h00 / Pièce expédiée ce jour">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="notesEscalade">Notes pour l'échelon supérieur</label>
+                        <textarea id="notesEscalade" rows="2" placeholder="Préciser les tests déjà réalisés pour éviter que le client ne répète les mêmes manipulations..."></textarea>
+                    </div>
+                </div>
+
+                <!-- BOUTON D'ENREGISTREMENT PRINCIPAL -->
+                <div style="margin-top: 14px; display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap;">
+                    <button class="btn btn-outline" onclick="reinitialiserFormulaire()">Réinitialiser</button>
+                    <button class="btn btn-call-encours" onclick="mettreBilletEnCoursNonTermine()" style="padding: 10px 18px; font-size: 0.88rem;">
+                        <i data-lucide="clock" style="width: 16px; height: 16px;"></i>
+                        Sauvegarder « En cours »
+                    </button>
+                    <button class="btn btn-red" onclick="enregistrerBillet()" style="padding: 10px 22px; font-size: 0.88rem;">
+                        <i data-lucide="check" style="width: 16px; height: 16px;"></i>
+                        Clôturer & Enregistrer
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- COLONNE 3 : HISTORIQUE, RECHERCHE & CAPITALISATION (PHASE 4) -->
+        <div class="panel sidebar-knowledge">
+
+            <div class="section-header" style="margin-bottom: 10px;">
+                <div class="section-header-title">
+                    <i data-lucide="database" style="width: 16px; height: 16px; color: var(--accent-green);"></i>
+                    <span>Base des Billets</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px;">
+                    <button type="button" class="btn btn-outline" id="btnForcerSync" onclick="forcerActualisationDirecte()" title="Synchroniser immédiatement avec la base" style="padding: 2px 6px; font-size: 0.68rem; color: #10B981;">
+                        <i data-lucide="refresh-cw" style="width: 12px; height: 12px;"></i>
+                    </button>
+                    <span class="badge-optionnel" id="totalBilletsBadge">0 fiches</span>
+                </div>
+            </div>
+
+            <!-- ONGLETS DE FILTRE DES BILLETS (ACTIFS / RÉSOLUS / ARCHIVES) -->
+            <div style="display: flex; gap: 4px; background: rgba(0,0,0,0.3); padding: 3px; border-radius: 6px; margin-bottom: 10px; border: 1px solid var(--border-subtle);">
+                <button type="button" class="btn btn-outline" id="tabFiltreTous" style="flex: 1; padding: 4px 6px; font-size: 0.68rem; justify-content: center; background: rgba(209,0,31,0.15); border-color: var(--rw-red); color: #FFF;" onclick="changerFiltreStatut('tous')">
+                    Tous
+                </button>
+                <button type="button" class="btn btn-outline" id="tabFiltreActifs" style="flex: 1; padding: 4px 6px; font-size: 0.68rem; justify-content: center;" onclick="changerFiltreStatut('actifs')">
+                    En cours
+                </button>
+                <button type="button" class="btn btn-outline" id="tabFiltreResolus" style="flex: 1; padding: 4px 6px; font-size: 0.68rem; justify-content: center;" onclick="changerFiltreStatut('resolus')">
+                    Résolus
+                </button>
+                <button type="button" class="btn btn-outline" id="tabFiltreArchives" style="flex: 1; padding: 4px 6px; font-size: 0.68rem; justify-content: center;" onclick="changerFiltreStatut('archives')">
+                    Archivés
+                </button>
+            </div>
+
+            <!-- BARRE DE RECHERCHE RAPIDE MULTI-CRITÈRES -->
+            <div class="form-group" style="margin-bottom: 10px;">
+                <input type="text" id="rechercheRapide" placeholder="🔍 Client, tél, TF, machine..." oninput="filtrerBillets()">
+            </div>
+
+            <!-- LISTE DES DERNIERS BILLETS ENREGISTRÉS -->
+            <div id="listeBillets" style="display: flex; flex-direction: column; gap: 8px;">
+                <!-- Rempli dynamiquement -->
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TOAST DE NOTIFICATION -->
+    <div class="toast" id="toastMessage">
+        <i data-lucide="check-circle-2" style="width: 20px; height: 20px;"></i>
+        <span id="toastTexte">Opération réussie</span>
+    </div>
+
+    <script>
+        // ─── INITIALISATION SUPABASE ───
+        const SUPABASE_URL = 'https://tnkyoqpxewvjsqlkvkcf.supabase.co';
+        const SUPABASE_KEY = 'sb_publishable_CvS_y4fnMs34RjNqokh2-A_QW9YGUFU';
+        let supabaseClient = null;
+
+        try {
+            if (window.supabase) {
+                supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+            }
+        } catch (e) {
+            console.error('Erreur initialisation Supabase client:', e);
+        }
+
+        // ─── ÉTAT GLOBAL ───
+        let categorieActive = 'Écran / Alimentation';
+        let statutResolutionChoisi = 'Résolu'; // 'Résolu', 'En cours', 'Escalade'
+        let billetsLocaux = [];
+        let billetEnEditionId = null;
+        let filtreStatutActif = 'tous'; // 'tous', 'actifs', 'resolus', 'archives'
+
+        // ⏱️ GESTION DU CHRONOMÈTRE D'APPEL
+        let chronoSecondes = 0;
+        let chronoTimer = null;
+        let chronoEnPause = false;
+
+        // Questionnaire guidé selon la catégorie (Flowchart RaycoWylie)
+        const QUESTIONNAIRE_CONFIG = {
+            'Écran / Alimentation': [
+                { id: 'alim_tension', label: 'Tension mesurée aux bornes d’alimentation (12V ou 24V ?)' },
+                { id: 'alim_fusible', label: 'L’état du fusible d’alimentation principal ou disjoncteur' },
+                { id: 'alim_demarrage', label: 'L’écran émet-il un bip ou flash au tour de clé ?' },
+                { id: 'alim_cables', label: 'État visuel du faisceau d’alimentation et masse châssis' }
+            ],
+            'Alarme de surcharge': [
+                { id: 'surch_pourcentage', label: 'Quel pourcentage de capacité (% SWL) affiche le système ?' },
+                { id: 'surch_sans_charge', label: 'L’alarme sonne-t-elle même à vide ou avec crochet posé ?' },
+                { id: 'surch_derniere_calib', label: 'Date de la dernière calibration de charge ?' },
+                { id: 'surch_capteur_pression', label: 'Pression hydraulique lue au vérin de relevage' }
+            ],
+            'Anti-2-Block (ATB)': [
+                { id: 'atb_type', label: 'Type ATB : Filaire (câble/enrouleur) ou Sans-fil (R160) ?' },
+                { id: 'atb_batterie', label: 'Si sans-fil, niveau de batterie ou pile de l’émetteur' },
+                { id: 'atb_contrepoids', label: 'Le contrepoids suspendu est-il bien libre sur le câble ?' },
+                { id: 'atb_signal_led', label: 'La LED sur l’interrupteur ATB réagit-elle au levage ?' }
+            ],
+            'Capteurs & Mesures': [
+                { id: 'capt_type', label: 'Quel capteur fait défaut (Angle, Longueur, Vent, Pression) ?' },
+                { id: 'capt_valeur_lue', label: 'Valeur affichée vs valeur réelle estimée par l’opérateur' },
+                { id: 'capt_cablage', label: 'Câble dans tambour enrouleur rétractable intact ou pincé ?' },
+                { id: 'capt_humidité', label: 'Y a-t-il eu lavage haute pression ou pluie intense récente ?' }
+            ],
+            'Caméra / Affichage': [
+                { id: 'cam_modele', label: 'Système vidéo RaycoWylie ou écran Rayconnect ?' },
+                { id: 'cam_ecran_bleu', label: 'Écran bleu ("No Signal") ou écran totalement noir ?' },
+                { id: 'cam_connecteur', label: 'Connecteur caméra 4-broches vissé et étanche ?' }
+            ],
+            'Pièces / Commande': [
+                { id: 'piece_ref', label: 'Numéro de pièce ou référence recherchée' },
+                { id: 'piece_urgence', label: 'Degré d’urgence (Machine arrêtée / Chantier bloqué ?)' },
+                { id: 'piece_adresse_livraison', label: 'Adresse de livraison souhaitée' }
+            ]
+        };
+
+        // Solutions suggérées par défaut (Base de connaissances RaycoWylie)
+        const SUGGESTIONS_CONFIG = {
+            'Écran / Alimentation': [
+                { titre: 'Vérifier la masse châssis batterie', desc: 'Nettoyer le bornier de masse (résout 40% des coupures d’alimentation sur i4500)' },
+                { titre: 'Hard reboot système', desc: 'Couper le coupe-batterie 30 secondes et redémarrer contact mis' }
+            ],
+            'Alarme de surcharge': [
+                { titre: 'Contrôler la configuration de mouflage', desc: 'Vérifier que le nombre de brins au mouflage correspond à la programmation écran' },
+                { titre: 'Test à vide du zéro transducteur', desc: 'Vérifier la lecture zéro bars sans charge sur flèche horizontale' }
+            ],
+            'Anti-2-Block (ATB)': [
+                { titre: 'Remplacement pile émetteur R160', desc: 'Changer la pile au lithium 3.6V D-Cell de l’émetteur tête de flèche' },
+                { titre: 'Ré-appairage sans fil R160', desc: 'Relancer la recherche de canal sans fil dans le menu superviseur' }
+            ],
+            'Capteurs & Mesures': [
+                { titre: 'Contrôle niveau d’angle digital', desc: 'Poser un niveau digital sur la flèche et comparer la valeur avec l’afficheur' },
+                { titre: 'Vérifier la tension du ressort tambour', desc: 'S’assurer que le câble de longueur s’enroule sans jeu' }
+            ],
+            'Caméra / Affichage': [
+                { titre: 'Inversion de port caméra', desc: 'Brancher la caméra sur le port CAM 2 pour tester si le problème vient du moniteur' }
+            ],
+            'Pièces / Commande': [
+                { titre: 'Vérification inventaire magasin', desc: 'Vérifier disponibilité immédiate dans l’entrepôt central ou camions de service' }
+            ]
+        };
+
+        // ─── AU CHARGEMENT DU DOM ───
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            genererReferenceTFAutomatique();
+            // Le chrono démarre à 00:00:00 et n'est pas lancé automatiquement
+            actualiserAffichageEtatAppel();
+            actualiserQuestionsGuidees();
+            actualiserSuggestions();
+            chargerBilletsDepuisStockage();
+            initialiserSynchronisationTempsReel();
+        });
+
+        // ─── CHRONOMÈTRE D'APPEL ENTRANT & CYCLE DE VIE D'APPEL ───
+        let appelEnCours = false;
+
+        function formatTempsChrono(totalSec) {
+            const hrs = String(Math.floor(totalSec / 3600)).padStart(2, '0');
+            const min = String(Math.floor((totalSec % 3600) / 60)).padStart(2, '0');
+            const sec = String(totalSec % 60).padStart(2, '0');
+            return `${hrs}:${min}:${sec}`;
+        }
+
+        function actualiserAffichageEtatAppel() {
+            const ind = document.getElementById('indicateurAppelPoint');
+            const titre = document.getElementById('titreEtatAppel');
+            const sousTitre = document.getElementById('sousTitreEtatAppel');
+            const cadre = document.getElementById('cadreBanniereAppel');
+            const btnReprendre = document.getElementById('btnReprendreAppel');
+            const lblDemarrer = document.getElementById('lblBtnDemarrer');
+            const btnHeaderStart = document.getElementById('btnHeaderDemarrerAppel');
+
+            if (appelEnCours) {
+                if (ind) ind.style.background = '#10B981';
+                if (titre) titre.textContent = 'APPEL EN DIRECT — EN COURS';
+                if (sousTitre) sousTitre.textContent = 'Chronomètre actif • Communication en cours avec le client';
+                if (cadre) cadre.classList.add('call-active-pulse');
+                if (lblDemarrer) lblDemarrer.textContent = '📞 Appel actif';
+                if (btnReprendre) btnReprendre.style.display = 'none';
+                if (btnHeaderStart) btnHeaderStart.style.opacity = '0.7';
+            } else {
+                if (ind) ind.style.background = chronoSecondes > 0 ? '#F59E0B' : '#9CA3AF';
+                if (titre) titre.textContent = chronoSecondes > 0 ? 'APPEL ARRÊTÉ / EN PAUSE' : 'COMMUNICATION TÉLÉPHONIQUE';
+                if (sousTitre) sousTitre.textContent = chronoSecondes > 0 
+                    ? `Dernière durée : ${formatTempsChrono(chronoSecondes)} • Cliquez sur Reprendre si le client rappelle` 
+                    : 'Prêt à démarrer un appel ou reprendre un billet';
+                if (cadre) cadre.classList.remove('call-active-pulse');
+                if (lblDemarrer) lblDemarrer.textContent = '📞 Démarrer l\'appel';
+                if (btnHeaderStart) btnHeaderStart.style.opacity = '1';
+
+                // Si un billet est chargé ou du temps existe, afficher le bouton reprendre
+                if (btnReprendre) {
+                    btnReprendre.style.display = (billetEnEditionId || chronoSecondes > 0) ? 'inline-flex' : 'none';
+                }
+            }
+        }
+
+        function demarrerChronoAppel() {
+            if (chronoTimer) clearInterval(chronoTimer);
+            appelEnCours = true;
+            chronoEnPause = false;
+            actualiserAffichageEtatAppel();
+
+            chronoTimer = setInterval(() => {
+                if (!chronoEnPause && appelEnCours) {
+                    chronoSecondes++;
+                    const el = document.getElementById('horlogeAppel');
+                    if (el) el.textContent = formatTempsChrono(chronoSecondes);
+                }
+            }, 1000);
+        }
+
+        function arreterChronoAppel() {
+            appelEnCours = false;
+            if (chronoTimer) {
+                clearInterval(chronoTimer);
+                chronoTimer = null;
+            }
+            actualiserAffichageEtatAppel();
+        }
+
+        function demarrerNouvelAppel() {
+            // Remise à zéro et démarrage d'une communication
+            chronoSecondes = 0;
+            chronoEnPause = false;
+            const el = document.getElementById('horlogeAppel');
+            if (el) el.textContent = '00:00:00';
+            demarrerChronoAppel();
+            afficherToast('📞 Appel démarré ! Le chronomètre est lancé.', 'success');
+            document.getElementById('nomClient').focus();
+        }
+
+        function reprendreAppelExistant() {
+            // Reprend le chrono à partir de sa valeur actuelle sans réinitialiser
+            demarrerChronoAppel();
+            const ref = document.getElementById('referenceTF').value || 'ce billet';
+            afficherToast(`▶️ Reprise de l'appel pour ${ref}. Chronomètre actif !`, 'success');
+        }
+
+        async function terminerEtEnregistrerBillet() {
+            // Arrête immédiatement le compteur et sauvegarde
+            arreterChronoAppel();
+            await enregistrerBillet();
+        }
+
+        function basculerPauseChronoAppel() {
+            if (!appelEnCours && chronoSecondes === 0) {
+                demarrerNouvelAppel();
+                return;
+            }
+            chronoEnPause = !chronoEnPause;
+            const btn = document.getElementById('btnPauseChrono');
+            if (btn) {
+                btn.innerHTML = chronoEnPause 
+                    ? '<i data-lucide="play" style="width: 13px; height: 13px; color: #10B981;"></i>' 
+                    : '<i data-lucide="pause" style="width: 13px; height: 13px;"></i>';
+                lucide.createIcons();
+            }
+            actualiserAffichageEtatAppel();
+            afficherToast(chronoEnPause ? 'Chronomètre d’appel en pause' : 'Chronomètre d’appel repris');
+        }
+
+        function reinitialiserChronoAppel() {
+            arreterChronoAppel();
+            chronoSecondes = 0;
+            chronoEnPause = false;
+            const el = document.getElementById('horlogeAppel');
+            if (el) el.textContent = '00:00:00';
+            const btn = document.getElementById('btnPauseChrono');
+            if (btn) {
+                btn.innerHTML = '<i data-lucide="pause" style="width: 13px; height: 13px;"></i>';
+                lucide.createIcons();
+            }
+            actualiserAffichageEtatAppel();
+        }
+
+        // ─── GÉNÉRATION RÉFÉRENCE TF-XXXXX ───
+        function genererReferenceTFAutomatique() {
+            const tfInput = document.getElementById('referenceTF');
+            if (tfInput && !tfInput.value) {
+                const num = Math.floor(10000 + Math.random() * 89999);
+                tfInput.value = `TF-${num}`;
+            }
+        }
+
+        // ─── SÉLECTION CATÉGORIE DU TROUBLE ───
+        function selectionnerCategorie(nomCat, element) {
+            categorieActive = nomCat;
+            document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
+            if (element) element.classList.add('active');
+
+            const titleEl = document.getElementById('guidedTitle');
+            if (titleEl) titleEl.textContent = `Questionnaire guidé — ${nomCat}`;
+
+            actualiserQuestionsGuidees();
+            actualiserSuggestions();
+            lucide.createIcons();
+        }
+
+        // ─── QUESTIONS GUIDÉES DYNAMIQUES ───
+        function actualiserQuestionsGuidees() {
+            const container = document.getElementById('guidedQuestionsContainer');
+            if (!container) return;
+
+            const questions = QUESTIONNAIRE_CONFIG[categorieActive] || [];
+            if (questions.length === 0) {
+                container.innerHTML = '<p style="font-size: 0.75rem; color: var(--text-dim);">Aucune question spécifique pour cette catégorie.</p>';
+                return;
+            }
+
+            container.innerHTML = questions.map((q, idx) => `
+                <div class="question-item">
+                    <div class="question-label">Q${idx + 1}. ${q.label}</div>
+                    <input type="text" id="q_${q.id}" placeholder="Réponse ou observation..." style="font-size: 0.8rem; padding: 6px 10px;">
+                </div>
+            `).join('');
+        }
+
+        // ─── SUGGESTIONS AUTOMATIQUES ───
+        function actualiserSuggestions() {
+            const container = document.getElementById('suggestionsContainer');
+            if (!container) return;
+
+            const suggestions = SUGGESTIONS_CONFIG[categorieActive] || [];
+            container.innerHTML = suggestions.map(s => `
+                <div class="solution-card">
+                    <div>
+                        <strong>${s.titre}</strong>
+                        <div style="font-size: 0.72rem; color: var(--text-dim);">${s.desc}</div>
+                    </div>
+                    <button class="btn btn-outline" style="padding: 4px 10px; font-size: 0.72rem;" onclick="appliquerSuggestion('${s.titre.replace(/'/g, "\\'")}')">
+                        Appliquer
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function appliquerSuggestion(titre) {
+            const solutionCtrl = document.getElementById('solutionAppliquee');
+            if (solutionCtrl) {
+                if (solutionCtrl.value) {
+                    solutionCtrl.value += ` • ${titre}`;
+                } else {
+                    solutionCtrl.value = titre;
+                }
+                afficherToast('Solution ajoutée à la fiche');
+            }
+        }
+
+        // ─── DÉCISION RÉSOLUTION (RÉSOLU / EN COURS / ESCALADE) ───
+        function choisirResolution(statut) {
+            statutResolutionChoisi = statut;
+            const choiceYes = document.getElementById('choiceYes');
+            const choiceEnCours = document.getElementById('choiceEnCours');
+            const choiceNo = document.getElementById('choiceNo');
+            const blocOui = document.getElementById('blocResolutionOui');
+            const blocEnCours = document.getElementById('blocResolutionEnCours');
+            const blocNon = document.getElementById('blocResolutionNon');
+
+            if (choiceYes) choiceYes.classList.remove('selected');
+            if (choiceEnCours) choiceEnCours.classList.remove('selected');
+            if (choiceNo) choiceNo.classList.remove('selected');
+
+            if (blocOui) blocOui.style.display = 'none';
+            if (blocEnCours) blocEnCours.style.display = 'none';
+            if (blocNon) blocNon.style.display = 'none';
+
+            if (statut === 'resolu' || statut === 'Résolu') {
+                statutResolutionChoisi = 'Résolu';
+                if (choiceYes) choiceYes.classList.add('selected');
+                if (blocOui) blocOui.style.display = 'block';
+            } else if (statut === 'encours' || statut === 'En cours') {
+                statutResolutionChoisi = 'En cours';
+                if (choiceEnCours) choiceEnCours.classList.add('selected');
+                if (blocEnCours) blocEnCours.style.display = 'block';
+            } else {
+                statutResolutionChoisi = 'Escalade';
+                if (choiceNo) choiceNo.classList.add('selected');
+                if (blocNon) blocNon.style.display = 'block';
+            }
+        }
+
+        // ─── ACTION RAPIDE : METTRE L'APPEL AU STATUT « EN COURS - NON TERMINÉ » ───
+        async function mettreBilletEnCoursNonTermine() {
+            choisirResolution('encours');
+            await enregistrerBillet(true);
+        }
+
+        // ─── ENREGISTREMENT DU BILLET (AVEC STATUT & DURÉE D'APPEL) ───
+        async function enregistrerBillet(estEnCoursForcé = false) {
+            const nomClient = document.getElementById('nomClient').value.trim();
+            const telephoneClient = document.getElementById('telephoneClient').value.trim();
+
+            // ⚠️ SEULES INFORMATIONS OBLIGATOIRES !
+            if (!nomClient) {
+                afficherToast('Erreur : Le Nom du client est obligatoire.', 'error');
+                document.getElementById('nomClient').focus();
+                return;
+            }
+            if (!telephoneClient) {
+                afficherToast('Erreur : Le Téléphone du client est obligatoire.', 'error');
+                document.getElementById('telephoneClient').focus();
+                return;
+            }
+
+            // Durée de l'appel formatée
+            const dureeAppelTexte = formatTempsChrono(chronoSecondes);
+
+            // Statut effectif
+            let statutFinal = estEnCoursForcé ? 'En cours' : statutResolutionChoisi;
+
+            // Collecte des réponses aux questions guidées
+            const questions = QUESTIONNAIRE_CONFIG[categorieActive] || [];
+            const reponses = {};
+            questions.forEach(q => {
+                const input = document.getElementById(`q_${q.id}`);
+                if (input && input.value.trim()) {
+                    reponses[q.label] = input.value.trim();
+                }
+            });
+
+            const nouveauBillet = {
+                id: billetEnEditionId || `ticket_${Date.now()}`,
+                reference_tf: document.getElementById('referenceTF').value.trim() || `TF-${Math.floor(10000 + Math.random() * 89999)}`,
+                nom_client: nomClient,
+                telephone: telephoneClient,
+                entreprise: document.getElementById('entrepriseClient').value.trim() || null,
+                courriel: document.getElementById('courrielClient').value.trim() || null,
+                pays_region: document.getElementById('paysRegion').value.trim() || null,
+                type_client: document.getElementById('typeClient').value,
+                
+                type_grue: document.getElementById('typeGrue').value || null,
+                marque: document.getElementById('marqueGrue').value.trim() || null,
+                numero_serie_machine: document.getElementById('numSerieMachine').value.trim() || null,
+                heures_fonctionnement: document.getElementById('anneeHeures').value.trim() || null,
+                site_chantier: document.getElementById('siteChantier').value.trim() || null,
+                
+                systeme_raycowylie: document.getElementById('systemeInstalle').value,
+                accessoires: document.getElementById('accessoiresSysteme').value.trim() || null,
+                
+                categorie_trouble: categorieActive,
+                description_trouble: document.getElementById('descriptionTrouble').value.trim() || null,
+                reponses_questions_guidees: reponses,
+                
+                statut_resolution: statutFinal,
+                est_archive: false,
+                duree_appel_secondes: chronoSecondes,
+                duree_appel_texte: dureeAppelTexte,
+                solution_appliquee: statutFinal === 'Résolu' ? document.getElementById('solutionAppliquee').value.trim() : null,
+                pieces_utilisees: statutFinal === 'Résolu' ? document.getElementById('piecesUtilisees').value.trim() : null,
+                motif_escalade: statutFinal === 'Escalade' ? document.getElementById('typeEscalade').value : (statutFinal === 'En cours' ? document.getElementById('motifEnCours').value : null),
+                delai_promis: statutFinal === 'Escalade' ? document.getElementById('delaiPromis').value.trim() : null,
+                notes_internes: statutFinal === 'Escalade' ? document.getElementById('notesEscalade').value.trim() : (statutFinal === 'En cours' ? document.getElementById('prochaineActionEnCours').value.trim() : null),
+                est_resolu_premier_appel: statutFinal === 'Résolu',
+                date_creation: new Date().toISOString(),
+                updated_at: new Date().toISOString()
+            };
+
+            // 1. Sauvegarde locale immédiate avec protection contre l'écrasement involontaire
+            const indexExistant = billetsLocaux.findIndex(b => b.id === nouveauBillet.id);
+            if (indexExistant >= 0) {
+                const existant = billetsLocaux[indexExistant];
+                // Conserver le statut d'archivage et la date de création originale
+                nouveauBillet.est_archive = existant.est_archive || false;
+                if (existant.date_creation) {
+                    nouveauBillet.date_creation = existant.date_creation;
+                }
+                billetsLocaux[indexExistant] = nouveauBillet;
+            } else {
+                billetsLocaux.unshift(nouveauBillet);
+            }
+            localStorage.setItem('rayco_billets_service', JSON.stringify(billetsLocaux));
+
+            // 2. Sauvegarde Supabase (si connectivité)
+            if (supabaseClient) {
+                try {
+                    const { error } = await supabaseClient
+                        .from('billets_service_technique')
+                        .upsert(nouveauBillet);
+                    if (error) {
+                        console.warn('Note Supabase:', error.message);
+                    }
+                } catch (err) {
+                    console.warn('Sync Supabase en arrière-plan:', err);
+                }
+            }
+
+            // 3. Notifier immédiatement toutes les autres fenêtres/onglets ouverts
+            try {
+                if (canalBroadcastOnglets) {
+                    canalBroadcastOnglets.postMessage({ type: 'SYNC_BILLETS', id: nouveauBillet.id });
+                }
+            } catch (e) {}
+
+            // Arrêt du chronomètre d'appel lors de l'enregistrement
+            arreterChronoAppel();
+
+            const msgStatut = statutFinal === 'En cours' ? 'marqué EN COURS - NON TERMINÉ' : (statutFinal === 'Résolu' ? 'clôturé & Résolu' : 'mis en Escalade');
+            afficherToast(`Billet ${nouveauBillet.reference_tf} ${msgStatut} (Durée : ${dureeAppelTexte})`, 'success');
+            reinitialiserFormulaire();
+            rendreListeBillets();
+            mettreAJourStatistiques();
+        }
+
+        // ─── CHARGEMENT ET SYNCHRONISATION ───
+        async function chargerBilletsDepuisStockage() {
+            // Lecture LocalStorage en premier pour affichage immédiat
+            try {
+                const saved = localStorage.getItem('rayco_billets_service');
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    // Nettoyer d'anciens faux billets de démo s'il y en avait
+                    billetsLocaux = (Array.isArray(parsed) ? parsed : []).filter(b => !String(b.id || '').startsWith('ticket_demo_'));
+                }
+            } catch (e) {
+                console.error(e);
+            }
+
+            // Synchronisation avec la base de données Supabase persistante
+            if (supabaseClient) {
+                try {
+                    const { data, error } = await supabaseClient
+                        .from('billets_service_technique')
+                        .select('*')
+                        .order('date_creation', { ascending: false });
+
+                    if (!error && Array.isArray(data)) {
+                        // Filtrer également tout démo éventuel
+                        billetsLocaux = data.filter(b => !String(b.id || '').startsWith('ticket_demo_'));
+                        localStorage.setItem('rayco_billets_service', JSON.stringify(billetsLocaux));
+                    }
+                } catch (e) {
+                    console.log('Mode réseau / Supabase en attente ou hors-ligne:', e);
+                }
+            }
+
+            rendreListeBillets();
+            mettreAJourStatistiques();
+        }
+
+        // ─── SYNCHRONISATION INSTANTANÉE MULTI-TECHNICIENS (BROADCAST + WEBSOCKET + POLLING) ───
+        let canalSupabase = null;
+        let timerPollingAuto = null;
+        let canalBroadcastOnglets = null;
+
+        try {
+            if (window.BroadcastChannel) {
+                canalBroadcastOnglets = new BroadcastChannel('rayco_billets_channel');
+                canalBroadcastOnglets.onmessage = (event) => {
+                    console.log('⚡ Message inter-onglets reçu :', event.data);
+                    if (event.data && event.data.type === 'SYNC_BILLETS') {
+                        synchroniserDepuisSupabaseSilencieux();
+                    }
+                };
+            }
+        } catch (e) {
+            console.warn('BroadcastChannel non supporté :', e);
+        }
+
+        // Écouter également les événements Storage pour synchronisation instantanée entre onglets du même navigateur
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'rayco_billets_service' && e.newValue) {
+                try {
+                    const parsed = JSON.parse(e.newValue);
+                    if (Array.isArray(parsed)) {
+                        fusionnerBilletsDistants(parsed);
+                    }
+                } catch (err) {}
+            }
+        });
+
+        function fusionnerBilletsDistants(listeDistante) {
+            if (!Array.isArray(listeDistante)) return;
+            const listeFiltree = listeDistante.filter(b => !String(b.id || '').startsWith('ticket_demo_'));
+            
+            // Vérifier s'il y a un réel changement pour éviter tout scintillement
+            const avantStr = JSON.stringify(billetsLocaux);
+            const apresStr = JSON.stringify(listeFiltree);
+            if (avantStr === apresStr) return;
+
+            // Important : Ne JAMAIS écraser ou modifier les champs du formulaire qu'un technicien est en train de taper !
+            // La fusion met à jour la liste en arrière-plan sans toucher au formulaire ni au chronomètre.
+            billetsLocaux = listeFiltree;
+            localStorage.setItem('rayco_billets_service', JSON.stringify(billetsLocaux));
+            rendreListeBillets(document.getElementById('rechercheRapide') ? document.getElementById('rechercheRapide').value : '');
+            mettreAJourStatistiques();
+        }
+
+        async function synchroniserDepuisSupabaseSilencieux() {
+            if (!supabaseClient) return;
+            try {
+                const { data, error } = await supabaseClient
+                    .from('billets_service_technique')
+                    .select('*')
+                    .order('date_creation', { ascending: false });
+
+                if (!error && Array.isArray(data)) {
+                    fusionnerBilletsDistants(data);
+                }
+            } catch (err) {
+                // Silencieux en arrière-plan
+            }
+        }
+
+        function initialiserSynchronisationTempsReel() {
+            if (!supabaseClient) return;
+
+            const badgeStatus = document.getElementById('liveSyncStatus');
+
+            // 1. Abonnement WebSocket PostgreSQL Changes (instantané)
+            try {
+                if (canalSupabase) {
+                    supabaseClient.removeChannel(canalSupabase);
+                }
+
+                canalSupabase = supabaseClient
+                    .channel('realtime_billets_service')
+                    .on('postgres_changes', {
+                        event: '*',
+                        schema: 'public',
+                        table: 'billets_service_technique'
+                    }, (payload) => {
+                        console.log('⚡ Modification reçue en direct :', payload);
+                        const { eventType, new: recordNouveau, old: recordAncien } = payload;
+
+                        if (eventType === 'INSERT' || eventType === 'UPDATE') {
+                            if (!recordNouveau || String(recordNouveau.id || '').startsWith('ticket_demo_')) return;
+                            const idx = billetsLocaux.findIndex(b => b.id === recordNouveau.id);
+                            if (idx >= 0) {
+                                // Règle d'horodatage : ne remplacer que si la version reçue est plus récente ou égale
+                                const dateLocale = new Date(billetsLocaux[idx].updated_at || billetsLocaux[idx].date_creation || 0).getTime();
+                                const dateDistante = new Date(recordNouveau.updated_at || recordNouveau.date_creation || 0).getTime();
+                                if (dateDistante >= dateLocale) {
+                                    billetsLocaux[idx] = { ...billetsLocaux[idx], ...recordNouveau };
+                                }
+                            } else {
+                                billetsLocaux.unshift(recordNouveau);
+                            }
+                            localStorage.setItem('rayco_billets_service', JSON.stringify(billetsLocaux));
+                            rendreListeBillets(document.getElementById('rechercheRapide') ? document.getElementById('rechercheRapide').value : '');
+                            mettreAJourStatistiques();
+                            
+                            // Si ce n'est pas le billet qu'on a actuellement en cours de rédaction dans le formulaire
+                            if (recordNouveau.id !== billetEnEditionId) {
+                                afficherToast(`⚡ Appel ${recordNouveau.reference_tf || ''} synchronisé en direct`, 'info');
+                            }
+                        } else if (eventType === 'DELETE') {
+                            if (recordAncien && recordAncien.id) {
+                                billetsLocaux = billetsLocaux.filter(b => b.id !== recordAncien.id);
+                                localStorage.setItem('rayco_billets_service', JSON.stringify(billetsLocaux));
+                                rendreListeBillets(document.getElementById('rechercheRapide') ? document.getElementById('rechercheRapide').value : '');
+                                mettreAJourStatistiques();
+                            }
+                        }
+                    })
+                    .subscribe((status) => {
+                        console.log('Statut du canal temps-réel Supabase :', status);
+                        if (badgeStatus) {
+                            if (status === 'SUBSCRIBED') {
+                                badgeStatus.innerHTML = '<span class="live-dot" style="background:#10B981;"></span><span>En direct (Instant)</span>';
+                                badgeStatus.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+                            } else {
+                                badgeStatus.innerHTML = '<span class="live-dot" style="background:#F59E0B;"></span><span>Sync Auto (4s)</span>';
+                            }
+                        }
+                    });
+            } catch (err) {
+                console.warn('Erreur écoute temps réel :', err);
+            }
+
+            // 2. Polling ultra-léger de secours toutes les 4 secondes
+            // Garantit l'affichage immédiat même si la publication temps-réel SQL n'est pas encore activée côté Supabase
+            if (timerPollingAuto) clearInterval(timerPollingAuto);
+            timerPollingAuto = setInterval(() => {
+                synchroniserDepuisSupabaseSilencieux();
+            }, 4000);
+        }
+
+        // Rafraîchissement manuel instantané au clic
+        async function forcerActualisationDirecte() {
+            const btn = document.getElementById('btnForcerSync');
+            if (btn) btn.classList.add('rotating');
+            await synchroniserDepuisSupabaseSilencieux();
+            if (btn) setTimeout(() => btn.classList.remove('rotating'), 600);
+            afficherToast('Base synchronisée avec le serveur');
+        }
+
+        // ─── GESTION DES FILTRES DE STATUT ───
+        function changerFiltreStatut(statut) {
+            filtreStatutActif = statut;
+            const tabs = ['Tous', 'Actifs', 'Resolus', 'Archives'];
+            tabs.forEach(t => {
+                const btn = document.getElementById(`tabFiltre${t}`);
+                if (btn) {
+                    if (t.toLowerCase() === statut.toLowerCase()) {
+                        btn.style.background = 'rgba(209, 0, 31, 0.15)';
+                        btn.style.borderColor = 'var(--rw-red)';
+                        btn.style.color = '#FFF';
+                    } else {
+                        btn.style.background = 'transparent';
+                        btn.style.borderColor = 'var(--border-highlight)';
+                        btn.style.color = 'var(--text-main)';
+                    }
+                }
+            });
+            rendreListeBillets(document.getElementById('rechercheRapide').value);
+        }
+
+        // ─── RENDU DE LA LISTE DES BILLETS AVEC ACTIONS ARCHIVAGE / RESTAURATION / SUPPRESSION ───
+        function rendreListeBillets(filtreTexte = '') {
+            const container = document.getElementById('listeBillets');
+            if (!container) return;
+
+            let liste = [...billetsLocaux];
+
+            // 1. Filtrage selon l'onglet actif
+            if (filtreStatutActif === 'actifs') {
+                liste = liste.filter(b => b.statut_resolution !== 'Résolu' && !b.est_archive);
+            } else if (filtreStatutActif === 'resolus') {
+                liste = liste.filter(b => b.statut_resolution === 'Résolu' && !b.est_archive);
+            } else if (filtreStatutActif === 'archives') {
+                liste = liste.filter(b => b.est_archive === true);
+            }
+
+            // 2. Filtrage texte enrichi (recherche dans les problèmes, solutions, notes, etc.)
+            if (filtreTexte) {
+                const f = filtreTexte.toLowerCase();
+                liste = liste.filter(b => 
+                    (b.nom_client && b.nom_client.toLowerCase().includes(f)) ||
+                    (b.telephone && b.telephone.toLowerCase().includes(f)) ||
+                    (b.reference_tf && b.reference_tf.toLowerCase().includes(f)) ||
+                    (b.entreprise && b.entreprise.toLowerCase().includes(f)) ||
+                    (b.numero_serie_machine && b.numero_serie_machine.toLowerCase().includes(f)) ||
+                    (b.categorie_trouble && b.categorie_trouble.toLowerCase().includes(f)) ||
+                    (b.description_trouble && b.description_trouble.toLowerCase().includes(f)) ||
+                    (b.solution_appliquee && b.solution_appliquee.toLowerCase().includes(f)) ||
+                    (b.delai_promis && b.delai_promis.toLowerCase().includes(f)) ||
+                    (b.motif_escalade && b.motif_escalade.toLowerCase().includes(f)) ||
+                    (b.notes_internes && b.notes_internes.toLowerCase().includes(f))
+                );
+            }
+
+            document.getElementById('totalBilletsBadge').textContent = `${liste.length} billets`;
+
+            if (liste.length === 0) {
+                container.innerHTML = '<div style="font-size: 0.75rem; color: var(--text-dim); text-align: center; padding: 24px;">Aucun billet enregistré pour le moment</div>';
+                return;
+            }
+
+            container.innerHTML = liste.map(b => {
+                const statut = b.statut_resolution || 'En cours';
+                const estResolu = statut === 'Résolu';
+                const estEnCours = statut === 'En cours';
+                const estEscalade = statut === 'Escalade';
+                const estArchive = b.est_archive === true;
+                const statusBadgeClass = estResolu ? 'status-resolu' : (estEnCours ? 'status-encours' : 'status-escalade');
+                const dateAffichee = b.date_creation ? new Date(b.date_creation).toLocaleDateString([], { month: 'short', day: 'numeric' }) + ' ' + new Date(b.date_creation).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '';
+                const dureeTxt = b.duree_appel_texte ? `⏱️ ${b.duree_appel_texte}` : '';
+
+                // Résumé des détails du diagnostic et de l'issue
+                const machineTxt = [b.type_grue, b.marque, b.systeme_raycowylie ? `[${b.systeme_raycowylie}]` : ''].filter(Boolean).join(' • ');
+
+                return `
+                    <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 12px; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--border-highlight)'" onmouseout="this.style.borderColor='var(--border-subtle)'">
+                        
+                        <!-- EN-TÊTE DU BILLET : RÉFÉRENCE & STATUT -->
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; gap: 6px; flex-wrap: wrap;">
+                            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; font-weight: 700; color: #FFD54F;" onclick="chargerBilletDansFormulaire('${b.id}')">${b.reference_tf || 'TF-N/A'}</span>
+                            <div style="display: flex; gap: 4px; align-items: center;">
+                                <span class="status-badge ${statusBadgeClass}">${statut}</span>
+                                ${estArchive ? `<span class="status-badge status-archive"><i data-lucide="archive" style="width: 10px; height: 10px;"></i> Archivé</span>` : ''}
+                            </div>
+                        </div>
+
+                        <!-- CLIENT ET CONTACT -->
+                        <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF;" onclick="chargerBilletDansFormulaire('${b.id}')">${b.nom_client}</div>
+                        <div style="font-size: 0.74rem; color: var(--text-muted); display: flex; justify-content: space-between; margin-top: 2px;" onclick="chargerBilletDansFormulaire('${b.id}')">
+                            <span>📞 <strong>${b.telephone}</strong></span>
+                            <span>${dateAffichee} ${dureeTxt ? `• ${dureeTxt}` : ''}</span>
+                        </div>
+                        ${b.entreprise ? `<div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 2px;" onclick="chargerBilletDansFormulaire('${b.id}')">🏢 ${b.entreprise} ${b.pays_region ? `• 📍 ${b.pays_region}` : ''}</div>` : ''}
+                        ${machineTxt ? `<div style="font-size: 0.7rem; color: #9CA3AF; margin-top: 2px;" onclick="chargerBilletDansFormulaire('${b.id}')">🏗️ ${machineTxt} ${b.numero_serie_machine ? `(S/N: ${b.numero_serie_machine})` : ''}</div>` : ''}
+
+                        <!-- CATÉGORIE DU TROUBLE -->
+                        <div style="font-size: 0.72rem; color: #FF7043; margin-top: 6px; font-weight: 700;" onclick="chargerBilletDansFormulaire('${b.id}')">⚠️ ${b.categorie_trouble || 'Trouble non classé'}</div>
+
+                        <!-- 📋 BLOC RÉSUMÉ DE L'APPEL (PROBLÈME, SOLUTION, DÉLAI, PIÈCES) -->
+                        <div style="margin-top: 6px; padding: 6px 8px; background: rgba(0,0,0,0.25); border-radius: 6px; border-left: 3px solid ${estResolu ? '#10B981' : (estEnCours ? '#F59E0B' : '#EF4444')}; font-size: 0.73rem; display: flex; flex-direction: column; gap: 4px;" onclick="chargerBilletDansFormulaire('${b.id}')">
+                            
+                            <!-- SYMPTÔME / PROBLÈME SIGNALÉ -->
+                            ${b.description_trouble ? `
+                                <div><strong style="color: #F87171;">Problème :</strong> <span style="color: #E5E7EB;">${b.description_trouble}</span></div>
+                            ` : `
+                                <div><strong style="color: #9CA3AF;">Problème :</strong> <span style="color: var(--text-dim); font-style: italic;">Non détaillé</span></div>
+                            `}
+
+                            <!-- SOLUTION APPLIQUÉE (SI RÉSOLU) -->
+                            ${estResolu && b.solution_appliquee ? `
+                                <div><strong style="color: #34D399;">Solution :</strong> <span style="color: #E5E7EB;">${b.solution_appliquee}</span></div>
+                            ` : ''}
+
+                            <!-- PIÈCES REQUISES / UTILISÉES -->
+                            ${b.pieces_utilisees ? `
+                                <div><strong style="color: #60A5FA;">Pièces :</strong> <span style="color: #D1D5DB;">${b.pieces_utilisees}</span></div>
+                            ` : ''}
+
+                            <!-- MOTIF D'ESCALADE OU EN COURS -->
+                            ${(estEnCours || estEscalade) && b.motif_escalade ? `
+                                <div><strong style="color: #FBBF24;">Étape :</strong> <span style="color: #FDE68A;">${b.motif_escalade}</span></div>
+                            ` : ''}
+
+                            <!-- DÉLAI PROMIS AU CLIENT -->
+                            ${b.delai_promis ? `
+                                <div><strong style="color: #FBBF24;">⏱️ Délai promis :</strong> <span style="color: #FCD34D; font-weight: 600;">${b.delai_promis}</span></div>
+                            ` : ''}
+
+                            <!-- PROCHAINE ACTION / NOTES INTERNES -->
+                            ${b.notes_internes ? `
+                                <div><strong style="color: #A78BFA;">Notes/Action :</strong> <span style="color: #DDD6FE;">${b.notes_internes}</span></div>
+                            ` : ''}
+                        </div>
+                        
+                        <!-- BARRE D'ACTIONS DU BILLET -->
+                        <div style="margin-top: 8px; padding-top: 6px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; gap: 6px; flex-wrap: wrap;">
+                            <button type="button" class="btn btn-call-resume" style="padding: 2px 8px; font-size: 0.68rem;" onclick="event.stopPropagation(); chargerBilletEtReprendreAppel('${b.id}')" title="Le client rappelle : reprendre ce billet et relancer le compteur d'appel">
+                                <i data-lucide="phone-forwarded" style="width: 11px; height: 11px;"></i> Reprendre l'appel
+                            </button>
+                            <div style="display: flex; gap: 6px; align-items: center;">
+                                <button type="button" class="btn btn-outline" style="padding: 2px 6px; font-size: 0.68rem; color: #FFD54F;" onclick="event.stopPropagation(); chargerBilletDansFormulaire('${b.id}')" title="Modifier ou compléter ce billet">
+                                    <i data-lucide="edit-3" style="width: 11px; height: 11px;"></i> Modifier
+                                </button>
+                                ${!estArchive ? `
+                                    <button type="button" class="btn btn-outline" style="padding: 2px 6px; font-size: 0.68rem; color: #10B981;" onclick="event.stopPropagation(); archiverBillet('${b.id}')" title="Archiver ce billet">
+                                        <i data-lucide="archive" style="width: 11px; height: 11px;"></i> Archiver
+                                    </button>
+                                    <button type="button" class="btn btn-outline" style="padding: 2px 6px; font-size: 0.68rem; color: #EF4444;" onclick="event.stopPropagation(); supprimerBillet('${b.id}')" title="Supprimer cet appel (actif ou restauré)">
+                                        <i data-lucide="trash-2" style="width: 11px; height: 11px;"></i> Supprimer
+                                    </button>
+                                ` : `
+                                    <button type="button" class="btn btn-outline" style="padding: 2px 6px; font-size: 0.68rem; color: #3B82F6;" onclick="event.stopPropagation(); desarchiverBillet('${b.id}')" title="Restaurer cet appel pour pouvoir le modifier ou le supprimer">
+                                        <i data-lucide="rotate-ccw" style="width: 11px; height: 11px;"></i> Restaurer
+                                    </button>
+                                `}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            lucide.createIcons();
+        }
+
+        function filtrerBillets() {
+            const txt = document.getElementById('rechercheRapide').value;
+            rendreListeBillets(txt);
+        }
+
+        // ─── ACTIONS D'ARCHIVAGE ET RESTAURATION (CONSERVE LE STATUT RÉSOLU / EN COURS / ESCALADE) ───
+        async function archiverBillet(id) {
+            const b = billetsLocaux.find(item => item.id === id);
+            if (!b) return;
+            // On conserve intact son statut_resolution ('Résolu', 'En cours', 'Escalade')
+            b.est_archive = true;
+            localStorage.setItem('rayco_billets_service', JSON.stringify(billetsLocaux));
+            
+            if (supabaseClient) {
+                try {
+                    await supabaseClient.from('billets_service_technique').update({ est_archive: true }).eq('id', id);
+                } catch (e) {
+                    console.log('Erreur archivage Supabase:', e);
+                }
+            }
+            afficherToast(`Billet ${b.reference_tf} archivé (statut préservé : ${b.statut_resolution || 'En cours'})`, 'info');
+            rendreListeBillets(document.getElementById('rechercheRapide').value);
+            mettreAJourStatistiques();
+        }
+
+        async function desarchiverBillet(id) {
+            const b = billetsLocaux.find(item => item.id === id);
+            if (!b) return;
+            // On restaure le billet avec son statut d'origine intact
+            b.est_archive = false;
+            localStorage.setItem('rayco_billets_service', JSON.stringify(billetsLocaux));
+            
+            if (supabaseClient) {
+                try {
+                    await supabaseClient.from('billets_service_technique').update({ est_archive: false }).eq('id', id);
+                } catch (e) {
+                    console.log('Erreur restauration Supabase:', e);
+                }
+            }
+            afficherToast(`Billet ${b.reference_tf} restauré avec le statut : ${b.statut_resolution || 'En cours'}`);
+            rendreListeBillets(document.getElementById('rechercheRapide').value);
+            mettreAJourStatistiques();
+        }
+
+        // ─── SUPPRESSION DES APPELS (AUTORISÉE SI NON-ARCHIVÉ OU RESTAURÉ) ───
+        async function supprimerBillet(id) {
+            const b = billetsLocaux.find(item => item.id === id);
+            if (!b) return;
+
+            // Protection : interdire la suppression directe depuis les archives sans restauration préalable
+            if (b.est_archive) {
+                afficherToast('Cet appel est archivé. Restaurez-le d’abord pour pouvoir le supprimer.', 'error');
+                return;
+            }
+
+            const ref = b.reference_tf || 'ce billet';
+            const client = b.nom_client || '';
+            if (!confirm(`Supprimer définitivement l'appel ${ref} (${client}) ?\nCette opération effacera l'appel de la base.`)) {
+                return;
+            }
+
+            // 1. Suppression locale
+            billetsLocaux = billetsLocaux.filter(item => item.id !== id);
+            localStorage.setItem('rayco_billets_service', JSON.stringify(billetsLocaux));
+
+            // 2. Suppression dans la base de données distante Supabase
+            if (supabaseClient) {
+                try {
+                    const { error } = await supabaseClient
+                        .from('billets_service_technique')
+                        .delete()
+                        .eq('id', id);
+                    if (error) {
+                        console.warn('Note suppression Supabase:', error.message);
+                    }
+                } catch (e) {
+                    console.log('Erreur suppression Supabase:', e);
+                }
+            }
+
+            afficherToast(`Appel ${ref} supprimé de la base de données`, 'error');
+
+            if (billetEnEditionId === id) {
+                reinitialiserFormulaire();
+            } else {
+                rendreListeBillets(document.getElementById('rechercheRapide') ? document.getElementById('rechercheRapide').value : '');
+                mettreAJourStatistiques();
+            }
+        }
+
+        // ─── CHARGER UN BILLET EXISTANT DANS LE FORMULAIRE ───
+        function chargerBilletDansFormulaire(id) {
+            const b = billetsLocaux.find(item => item.id === id);
+            if (!b) return;
+
+            billetEnEditionId = b.id;
+            document.getElementById('nomClient').value = b.nom_client || '';
+            document.getElementById('telephoneClient').value = b.telephone || '';
+            document.getElementById('entrepriseClient').value = b.entreprise || '';
+            document.getElementById('courrielClient').value = b.courriel || '';
+            document.getElementById('paysRegion').value = b.pays_region || '';
+            if (b.type_client) document.getElementById('typeClient').value = b.type_client;
+
+            document.getElementById('referenceTF').value = b.reference_tf || '';
+            if (b.type_grue) document.getElementById('typeGrue').value = b.type_grue;
+            document.getElementById('marqueGrue').value = b.marque || '';
+            document.getElementById('numSerieMachine').value = b.numero_serie_machine || '';
+            document.getElementById('anneeHeures').value = b.heures_fonctionnement || '';
+            document.getElementById('siteChantier').value = b.site_chantier || '';
+
+            if (b.systeme_raycowylie) document.getElementById('systemeInstalle').value = b.systeme_raycowylie;
+            document.getElementById('accessoiresSysteme').value = b.accessoires || '';
+            document.getElementById('descriptionTrouble').value = b.description_trouble || '';
+
+            if (b.categorie_trouble) {
+                const btn = Array.from(document.querySelectorAll('.cat-card')).find(c => c.textContent.includes(b.categorie_trouble.slice(0, 5)));
+                selectionnerCategorie(b.categorie_trouble, btn);
+            }
+
+            const statutExistant = b.statut_resolution || 'En cours';
+            choisirResolution(statutExistant);
+
+            if (statutExistant === 'Résolu') {
+                document.getElementById('solutionAppliquee').value = b.solution_appliquee || '';
+                document.getElementById('piecesUtilisees').value = b.pieces_utilisees || '';
+            } else if (statutExistant === 'En cours') {
+                if (b.motif_escalade) document.getElementById('motifEnCours').value = b.motif_escalade;
+                document.getElementById('prochaineActionEnCours').value = b.notes_internes || '';
+            } else {
+                if (b.motif_escalade) document.getElementById('typeEscalade').value = b.motif_escalade;
+                document.getElementById('delaiPromis').value = b.delai_promis || '';
+                document.getElementById('notesEscalade').value = b.notes_internes || '';
+            }
+
+            // Restaurer le temps d'appel enregistré
+            if (b.duree_appel_secondes !== undefined && b.duree_appel_secondes !== null) {
+                chronoSecondes = b.duree_appel_secondes;
+                chronoEnPause = true; // en pause pour consultation
+                const el = document.getElementById('horlogeAppel');
+                if (el) el.textContent = formatTempsChrono(chronoSecondes);
+                const btn = document.getElementById('btnPauseChrono');
+                if (btn) {
+                    btn.innerHTML = '<i data-lucide="play" style="width: 13px; height: 13px; color: #10B981;"></i>';
+                    lucide.createIcons();
+                }
+            }
+
+            // Mettre à jour le badge d'en-tête et l'état
+            const headerBadge = document.getElementById('headerRefBadge');
+            if (headerBadge) headerBadge.textContent = `BILLET ${b.reference_tf || 'TF-XXXXX'}`;
+            actualiserAffichageEtatAppel();
+
+            afficherToast(`Billet ${b.reference_tf} chargé dans l'éditeur`);
+        }
+
+        // ─── CHARGER UN BILLET ET REPRENDRE DIRECTEMENT L'APPEL (CLIENT RAPPELLE) ───
+        function chargerBilletEtReprendreAppel(id) {
+            chargerBilletDansFormulaire(id);
+            // Démarrer la communication en continuant le compteur de temps existant
+            reprendreAppelExistant();
+        }
+
+        // ─── RECHERCHE AUTOMATIQUE TF-XXXXX ───
+        function rechercherHistoriqueTF() {
+            const tf = document.getElementById('referenceTF').value.trim();
+            const resDiv = document.getElementById('historiqueResultat');
+            if (!tf) {
+                resDiv.textContent = 'Veuillez saisir un numéro TF-XXXXX.';
+                return;
+            }
+            const trouvés = billetsLocaux.filter(b => b.reference_tf && b.reference_tf.toLowerCase() === tf.toLowerCase());
+            if (trouvés.length > 0) {
+                resDiv.innerHTML = `<span style="color: #10B981;">✓ Trouvé : ${trouvés.length} billet(s) antérieur(s) pour cette référence.</span>`;
+            } else {
+                resDiv.innerHTML = `<span style="color: var(--text-dim);">Aucun billet précédent trouvé pour ${tf}. Nouveau dossier.</span>`;
+            }
+        }
+
+        // ─── RÉINITIALISATION FORMULAIRE & NOUVEL APPEL (REPART À ZÉRO) ───
+        function reinitialiserFormulaire() {
+            billetEnEditionId = null;
+            document.getElementById('nomClient').value = '';
+            document.getElementById('telephoneClient').value = '';
+            document.getElementById('entrepriseClient').value = '';
+            document.getElementById('courrielClient').value = '';
+            document.getElementById('paysRegion').value = '';
+            document.getElementById('marqueGrue').value = '';
+            document.getElementById('numSerieMachine').value = '';
+            document.getElementById('anneeHeures').value = '';
+            document.getElementById('siteChantier').value = '';
+            document.getElementById('accessoiresSysteme').value = '';
+            document.getElementById('descriptionTrouble').value = '';
+            document.getElementById('solutionAppliquee').value = '';
+            document.getElementById('piecesUtilisees').value = '';
+            document.getElementById('delaiPromis').value = '';
+            document.getElementById('notesEscalade').value = '';
+            document.getElementById('historiqueResultat').textContent = '';
+
+            // ⏱️ REMISE DU COMPTEUR D'APPEL À ZÉRO POUR LE NOUVEL APPEL
+            reinitialiserChronoAppel();
+
+            genererReferenceTFAutomatique();
+            const headerBadge = document.getElementById('headerRefBadge');
+            const tfInput = document.getElementById('referenceTF');
+            if (headerBadge) headerBadge.textContent = `BILLET ${tfInput ? tfInput.value : 'TF-XXXXX'}`;
+
+            choisirResolution('resolu');
+            actualiserQuestionsGuidees();
+            actualiserSuggestions();
+            document.getElementById('nomClient').focus();
+        }
+
+        // ─── STATISTIQUES & COMPTEURS ───
+        function mettreAJourStatistiques() {
+            // Filtrer les billets non archivés pour les calculs de répartition active
+            const billetsActifsTous = billetsLocaux.filter(b => !b.est_archive);
+            const total = billetsLocaux.length;
+
+            const resolus = billetsActifsTous.filter(b => b.statut_resolution === 'Résolu').length;
+            const enCours = billetsActifsTous.filter(b => b.statut_resolution === 'En cours').length;
+            const escalades = billetsActifsTous.filter(b => b.statut_resolution === 'Escalade').length;
+            const archives = billetsLocaux.filter(b => b.est_archive === true).length;
+
+            const taux = (resolus + enCours + escalades) > 0 
+                ? Math.round((resolus / (resolus + enCours + escalades)) * 100) 
+                : 100;
+
+            const elTotal = document.getElementById('statTotalBillets');
+            if (elTotal) elTotal.textContent = total;
+
+            const elTaux = document.getElementById('statTauxResolution');
+            if (elTaux) elTaux.textContent = `${taux}%`;
+
+            const elEnCours = document.getElementById('statEnCours');
+            if (elEnCours) elEnCours.textContent = enCours;
+
+            const elEscalade = document.getElementById('statEscalade');
+            if (elEscalade) elEscalade.textContent = escalades;
+
+            // Mettre à jour les libellés des onglets avec leurs compteurs dynamiques
+            const tabTous = document.getElementById('tabFiltreTous');
+            if (tabTous) tabTous.textContent = `Tous (${total})`;
+
+            const tabActifs = document.getElementById('tabFiltreActifs');
+            if (tabActifs) tabActifs.textContent = `En cours (${enCours + escalades})`;
+
+            const tabResolus = document.getElementById('tabFiltreResolus');
+            if (tabResolus) tabResolus.textContent = `Résolus (${resolus})`;
+
+            const tabArchives = document.getElementById('tabFiltreArchives');
+            if (tabArchives) tabArchives.textContent = `Archivés (${archives})`;
+        }
+
+        // ─── NOTIFICATION TOAST ───
+        function afficherToast(message, type = 'success') {
+            const toast = document.getElementById('toastMessage');
+            const txt = document.getElementById('toastTexte');
+            txt.textContent = message;
+            toast.className = `toast ${type} show`;
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
